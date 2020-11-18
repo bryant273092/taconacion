@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Home",
+        "href": "/"
+    },
+    {
+        "name": "Menu",
+        "href": "/menu"
+    },
+    {
+        "name": "Order Online",
+        "href": "/order"
+    },
+    {
+        "name": "Catering",
+        "href": "/catering"
+    },
+    {
+        "name": "Location",
+        "href": "/location"
+    },
+    {
+        "name": "Contact",
+        "href": "/contact"
+    }
+]
