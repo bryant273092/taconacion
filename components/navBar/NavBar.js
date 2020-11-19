@@ -8,7 +8,7 @@ import {
     DropDownItem,
     MobileListContainer,
 } from './styled';
-import HamburgerIcon from './HamburgerIcon';
+import HamburgerIcon from './hamburgerIcon';
 import links from '../../data/nav_links.json'
 import { useState } from 'react';
 export const NavBar = () => {
