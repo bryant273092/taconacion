@@ -5,7 +5,8 @@ export const FooterContainer = styled(FlexColumn)`
     width: 90%;
     margin: 200px auto 10px auto;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6)
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
     
     
 `
@@ -19,14 +20,18 @@ export const FooterHeader = styled.h2`
 `
 export const FooterButton = styled.a`
     color: white;
-    font-size: 25px;
+    
 `
 export const IconContainer = styled(FlexRow)`
-    width: 70%;
+    width: 60%;
     margin: 0px auto;
     justify-content: space-between;
     @media (max-width: 850px) {
-        width: 80%
+        width: 45%
+    } ;
+    @media (max-width: 480px) {
+        width: 80%;
+        
     } ;
 `
 export const FooterIcon = styled(FooterButton)`
@@ -39,18 +44,28 @@ export const FooterLogo = styled.img`
 
 `
 export const HoursContainer = styled(FlexRow)`
-    width: 90%;
+width: 80%;
     margin: 0px auto;
-    @media (max-width: 1050px) {
-        font-size: 13px
+    @media (max-width: 1000px) {
+        font-size: 13px;
+        
     } ;
+    @media (max-width: 850px) {
+        width: 45%;
+        
+    } ;
+    @media (max-width: 480px) {
+        width: 80%;
+        
+    } ;
+    
     
 `
 export const Hours = styled(FlexColumn)`
-    width: 60%;
+    width: 65%;
 `
 export const Days = styled(FlexColumn)`
-    width: 40%;
+    width: 35%;
 `
 export const HoursText = styled.h4`
     color: white;
@@ -75,4 +90,22 @@ export const FooterItems = styled(FlexRow)`
 export const CopyRight = styled.h5`
     color: white;
     padding-top: 10px;
+`
+export const CallButton = styled.a`
+    width: 80%;
+    margin: 5px auto; 
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: rgba(238, 151, 28, 0.7);
+    padding: 10px 0px;
+    @media (max-width: 850px) {
+        font-size: 1em;
+        width: 45%;
+    } ;
+    @media (max-width: 480px) {
+        width: 80%;
+        
+    } ;
 `

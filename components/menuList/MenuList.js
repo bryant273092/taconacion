@@ -1,4 +1,4 @@
-import {MenuContainer, MenuNavContainer, MenuButton, ItemListContainer, ItemRow, CategoryHeading, ItemDescription, ItemHeading, ItemPrice, Category, TextContainer} from './styled';
+import {MenuContainer, MenuNavContainer, MenuButton, ItemListContainer, ItemRow, CategoryHeading, ItemDescription, ItemHeading, ItemPrice, Category, TextContainer, MeatSection, MeatHeading, MeatText, MeatOptions, AltLang, OptionDescription} from './styled';
 import menuItems from '../../data/menu.json'
 
 export const MenuList = () => {
@@ -10,9 +10,21 @@ export const MenuList = () => {
                 ))}
             </MenuNavContainer> */}
             <ItemListContainer>
+                <MeatSection>
+                    <MeatHeading>Meat Options</MeatHeading>
+                    <MeatOptions>
+                        <MeatText>Carne Asada <AltLang>(Grilled Steak) </AltLang> </MeatText>
+                        <MeatText>Pollo Asado <AltLang>(Grilled Chicken) </AltLang> </MeatText>
+                        <MeatText>Chorizo <AltLang>(Mexican Sauasage) </AltLang> </MeatText>
+                        <MeatText>Birria <AltLang>(Marinated Beef) </AltLang> </MeatText>
+                        <MeatText>Al Pastor <AltLang>(Marinated Pork) </AltLang> </MeatText>
+                        <MeatText>Carnitas <AltLang>(Braised Pork) </AltLang> </MeatText>
+                    </MeatOptions>
+                </MeatSection>
                 {menuItems.map((category) => (
                     <div>
                         <CategoryHeading key={category.category}>{category.category}</CategoryHeading>
+                        <OptionDescription key={category.category}>{category.description}</OptionDescription>
                         <div>
                             {category.items.map((item) => (
                                 <ItemRow key={item.name}>

@@ -26,7 +26,8 @@
                 "price" : "$9.95",
                 "image" : ""
             }
-        ]
+        ],
+        "description": "Machaca • Ham • Bacon • Chorizo"
     },
     {
         "category" : "Seafood",
@@ -156,7 +157,8 @@
                 "price" : "$6.95",
                 "image" : ""
             }
-        ]
+        ],
+        "description": "Add guacamole and/or sour cream at an additional cost"
     },
     {
         "category" : "Combos",
@@ -215,7 +217,8 @@
                 "price" : "$9.99",
                 "image" : ""
             }
-        ]
+        ],
+        "description" : "Served with rice, beans, medium soft drink"
     },
     {
         "category" : "Sides",

@@ -50,3 +50,39 @@ export const ItemPrice = styled.h3`
     color: #ee971c; 
     text-align: right;
 `
+export const MeatSection = styled(FlexColumn)`
+    width: 100%;
+    background-color: #ee971c;
+    height: auto;
+    margin: 0px auto;
+    border-radius: 5px;
+`
+export const MeatHeading = styled.h3`
+    color: black;
+    text-align: center;
+    margin-bottom: 0px;
+`
+export const MeatOptions = styled.div`
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    margin: 0px auto;
+    padding: 0px 5px;
+`
+export const MeatText = styled.h4`
+    color: white;
+    text-align:  center;
+    padding: 0px 5px;
+`
+export const AltLang = styled.span`
+    color: black;
+    font-size: 12px;
+    display: block;
+`
+export const OptionDescription = styled.h5`
+    color: #ee971c;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0px;
+
+`

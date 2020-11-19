@@ -3,7 +3,7 @@ import {FlexColumn, FlexRow} from '../layout'
 
 export const BannerContainer = styled(FlexColumn)`
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     background-image: url(/grill.jpg);
     background-size: cover;
 `
@@ -22,7 +22,7 @@ export const BannerHeader = styled.h1`
 export const BannerText = styled(BannerHeader)`
     font-size: 2em;
     margin-top: 0px;
-    color: #ee971c;
+    color: white;
     text-shadow: 1px 1px black;
     @media (max-width: 640px) {
         font-size: 1.2em;
@@ -43,10 +43,9 @@ export const BannerButton = styled.a`
     margin: 10px 5px; 
     color: white;
     text-align: center;
-    border-radius: 20px;
-    border: solid 3px #ee971c;
+    border-radius: 10px;
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(238, 151, 28, 0.7);
     padding: 10px 0px;
     @media (max-width: 500px) {
         font-size: 1em;
@@ -54,6 +53,14 @@ export const BannerButton = styled.a`
 `
 export const ImageFilter = styled.div`
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     background-color: rgba(0, 0, 0, 0.5);
+`
+export const ImageContainer = styled(FlexColumn)`
+    width: 100%;
+    margin: 0px auto;
+`
+export const Image = styled.img`
+    height: 250px;
+    margin: 10% auto 0 auto;
 `

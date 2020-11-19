@@ -14,8 +14,7 @@ import { useState } from 'react';
 export const NavBar = () => {
     //hook to control opening/closing dropdown menu when user clicks on hamburger icon
     const [display, setDisplay] = useState('none');
-    const teamLogo =
-    'https://dewey.tailorbrands.com/production/brand_version_mockup_image/454/4124798454_435c9479-54c4-456f-b52a-d63f90269f1c.png?cb=1605399423';
+    const teamLogo = "";
     //alternates display property for mobile drop down menu
     const changeDisplay = () => {
         if (display == 'none') {
@@ -37,9 +36,9 @@ export const NavBar = () => {
                     </DropDownItem>
                 ))}
             </MobileListContainer>
-            {/* <NavBarLogo>
-                <Image src={teamLogo} />
-            </NavBarLogo> */}
+            <NavBarLogo>
+                <img style={{width: "50px", height: "48px"}}src={"/taco_nacion_logo.png"} />
+            </NavBarLogo>
             <NavBarItems>
                 {links.map((link) => (
                     <NavBarItem key={link.name}>

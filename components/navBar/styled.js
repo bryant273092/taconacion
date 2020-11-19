@@ -12,8 +12,8 @@ export const NavBarContainer = styled(FlexRow)`
     top: 0;
 `;
 export const NavBarLogo = styled(FlexRow)`
-    border-radius: 20px;
     overflow: hidden;
+    margin-left: 20px;
 `;
 export const NavBarItems = styled(FlexRow)`
     width: 65%;
