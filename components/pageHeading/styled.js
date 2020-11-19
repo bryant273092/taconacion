@@ -13,7 +13,7 @@ export const Line = styled.hr`
 `
 export const Heading = styled.h1`
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 

@@ -25,18 +25,21 @@ export const CateringText = styled.h4`
     text-align: center;
 `
 export const CallButton = styled.a`
-    width: 20%;
-    height: 45px;
-    background-color: rgba(0,0,0);
-    margin: 0px auto;
+    width: 50%;
+    margin: 25px auto; 
     color: white;
     text-align: center;
-    border: solid 2px #ee971c;
-    border-radius: 5px;
-    line-height: 35px;
-    margin-bottom: 20px;
-    @media (max-width: 650px) {
-        width: 60%
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: rgba(238, 151, 28, 0.7);
+    padding: 10px 0px;
+    @media (max-width: 850px) {
+        font-size: 1em;
+        width: 45%;
+    } ;
+    @media (max-width: 480px) {
+        width: 80%;
+        
     } ;
     
 `
