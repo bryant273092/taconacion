@@ -1,3 +1,3 @@
-import { CateringPage }from './cateringpage'
+import { CateringPage }from './cateringPage'
 
 export default CateringPage;
