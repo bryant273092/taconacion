@@ -1,1 +1,1 @@
-export { FlexColumn, FlexRow } from './styled'
+export { FlexColumn, FlexRow, Container, HeaderTwo, HeaderThree, Button, Image, Text } from './styled'
