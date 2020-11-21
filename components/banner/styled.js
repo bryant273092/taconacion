@@ -4,7 +4,7 @@ import {FlexColumn, FlexRow} from '../layout';
 export const BannerContainer = styled(FlexColumn)`
     width: 100%;
     height: 80vh;
-    background-image: url(/grill.jpg);
+    background-image: url(/grill.webp);
     background-size: cover;
 `
 export const BannerHeader = styled.h1`

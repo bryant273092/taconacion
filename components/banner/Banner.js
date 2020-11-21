@@ -5,7 +5,7 @@ export const Banner = () => {
         <BannerContainer>
             <ImageFilter>
                 <ImageContainer>
-                    <Image src={'taco_nacion_logo.png'}/>
+                    <Image height='200px' width='300px' src={'taco_nacion_logo.webp'}/>
                 </ImageContainer>
                 
                 <BannerText>Authentic Mexican Food</BannerText>
