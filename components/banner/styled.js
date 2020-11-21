@@ -3,7 +3,7 @@ import {FlexColumn, FlexRow} from '../layout';
 
 export const BannerContainer = styled(FlexColumn)`
     width: 100%;
-    height: 80vh;
+    height: auto;
     background-image: url(/grill.webp);
     background-size: cover;
 `
@@ -32,7 +32,7 @@ export const BannerText = styled(BannerHeader)`
 `
 export const BannerButtonGrid = styled(FlexRow)`
     width: 55%;
-    margin: auto;
+    margin: 15px auto;
     @media (max-width: 640px) {
         flex-direction: column;
         width: 60%
@@ -53,7 +53,7 @@ export const BannerButton = styled.a`
 `
 export const ImageFilter = styled.div`
     width: 100%;
-    height: 80vh;
+    
     background-color: rgba(0, 0, 0, 0.5);
 `
 export const ImageContainer = styled(FlexColumn)`
@@ -61,6 +61,11 @@ export const ImageContainer = styled(FlexColumn)`
     margin: 0px auto;
 `
 export const Image = styled.img`
-    height: 250px;
+    width: 50%;
+    height: 50%;
     margin: 10% auto 0 auto;
+    @media (min-width: 640px) {
+        width: 324px;
+        height: 307px;
+    } ;
 `

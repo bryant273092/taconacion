@@ -10,10 +10,10 @@ export const Footer = () => {
 
                     <FooterHeader>Find Us Online</FooterHeader>
                     <IconContainer>
-                        <FooterIcon href="https://www.instagram.com/taco_nacion/">
+                        <FooterIcon title="Instagram" href="https://www.instagram.com/taco_nacion/">
                             <FontAwesomeIcon  icon={faInstagram}></FontAwesomeIcon>
                         </FooterIcon>
-                        <FooterIcon href="https://www.yelp.com/biz/taco-nacion-ontario">
+                        <FooterIcon title="Yelp"href="https://www.yelp.com/biz/taco-nacion-ontario">
                             <FontAwesomeIcon  icon={faYelp}></FontAwesomeIcon>
                         </FooterIcon>
                         <FooterIcon>

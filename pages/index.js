@@ -6,6 +6,7 @@ import Banner from '../components/banner'
 const WrappedComponents = () => {
   return (
     <>
+      <html lang="en" />
       <Banner />
       {/* <Images /> */}
     </>

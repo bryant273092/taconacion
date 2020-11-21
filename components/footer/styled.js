@@ -87,7 +87,7 @@ export const FooterItems = styled(FlexRow)`
     } ;
 
 `
-export const CopyRight = styled.h5`
+export const CopyRight = styled.h3`
     color: white;
     padding-top: 10px;
 `
