@@ -3,7 +3,7 @@ import { Days, DaysText, Hours, HoursText } from '../footer/styled';
 import {HoursContainer}  from './styled'; 
 
 export const Map = () => {
-    const mapStyle = { width: "90%", margin: "50px auto", height: "500px", frameborder: "0", allowfullscreen: "", ariahidden: "false", tabindex: "0", marginTop: "20px" }
+    const mapStyle = { width: "80%", margin: "50px auto", height: "300px", frameborder: "0", allowfullscreen: "", ariahidden: "false", tabindex: "0", marginTop: "20px" }
     return (
         <Container>
             <HeaderTwo>Where to find us</HeaderTwo>

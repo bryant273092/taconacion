@@ -22,10 +22,10 @@ export const MenuList = () => {
                     </MeatOptions>
                 </MeatSection>
                 {menuItems.map((category) => (
-                    <div>
+                    <div key={category.category}>
                         <CategoryHeading key={category.category}>{category.category}</CategoryHeading>
                         <OptionDescription key={category.category}>{category.description}</OptionDescription>
-                        <div>
+                        <div key={category.category}>
                             {category.items.map((item) => (
                                 <ItemRow key={item.name}>
                                     <TextContainer key={item.name}>

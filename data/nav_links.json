@@ -18,9 +18,5 @@
     {
         "name": "Location",
         "href": "/location"
-    },
-    {
-        "name": "Contact",
-        "href": "/contact"
     }
 ]

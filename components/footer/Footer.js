@@ -1,6 +1,7 @@
 import { FooterContainer, FooterItem, FooterHeader, FooterIcon, IconContainer, FooterButton, HoursText, HoursContainer, Hours, Days, DaysText, FooterItems, CopyRight, CallButton } from './styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faYelp, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { NewsLetter } from '../newsLetter/NewsLetter'
 export const Footer = () => {
     const mapStyle = { width: "90%",margin: "auto", height: "300", frameborder: "0", allowfullscreen: "", ariahidden: "false", tabindex: "0", marginTop: "20px" }
     return (
@@ -47,6 +48,9 @@ export const Footer = () => {
                 </FooterItem>
                 
             </FooterItems>
+            <FooterItem>
+                <NewsLetter></NewsLetter>
+            </FooterItem>
             <FooterItem>
                 <CopyRight >@ Copyright 2020 by <FooterButton href="//bryanth.dev">DreamWare LLC.</FooterButton></CopyRight>
             </FooterItem>

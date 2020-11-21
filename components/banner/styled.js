@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {FlexColumn, FlexRow} from '../layout'
+import {FlexColumn, FlexRow} from '../layout';
 
 export const BannerContainer = styled(FlexColumn)`
     width: 100%;

@@ -1,10 +1,12 @@
 import HOC from '../components/hoc';
 import Banner from '../components/banner'
-
+import Images from '../components/images';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const WrappedComponents = () => {
   return (
     <>
       <Banner />
+      <Images />
     </>
   )
 }
