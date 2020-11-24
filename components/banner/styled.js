@@ -9,7 +9,8 @@ export const BannerContainer = styled(FlexColumn)`
     background-attachment: fixed;
     background-position: bottom left;
     @media (max-width: 1024px) {
-        background-position: bottom center;
+        background-position: center center;
+        background-attachment: scroll;
     } ;
 `
 export const BannerHeader = styled.h1`
