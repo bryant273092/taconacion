@@ -1,6 +1,7 @@
 import Images from '../components/images';
 import HOC from '../components/hoc';
 import Banner from '../components/banner'
+import LandingSection from '../components/landing'
 
 
 const WrappedComponents = () => {
@@ -8,7 +9,7 @@ const WrappedComponents = () => {
     <>
       <html lang="en" />
       <Banner />
-      {/* <Images /> */}
+      <LandingSection />
     </>
   )
 }

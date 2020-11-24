@@ -41,8 +41,8 @@ export const Footer = () => {
                 </FooterItem>
                 <FooterItem>
                     <FooterHeader>Contact</FooterHeader>
-                    <CallButton href="tel:90999062045">Call Now</CallButton>
-                    <FooterButton href="tel:90999062045"> (909)906-2045</FooterButton>
+                    <CallButton href="tel:9099062045">Call Now</CallButton>
+                    <FooterButton href="tel:9099062045"> (909)906-2045</FooterButton>
                 </FooterItem>
                 
             </FooterItems>

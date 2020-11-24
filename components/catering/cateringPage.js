@@ -3,10 +3,9 @@ import {CateringContainer, CateringHeader, BannerImage, CateringText, CallButton
 export const CateringPage = () => {
     return(
         <CateringContainer >
-            <CateringHeader>Catering Packages</CateringHeader>
-            <CateringText>We provide the best catering packages for your next event.</CateringText>
-            <BannerImage src={'/catering.png'}></BannerImage>
-            <CateringText>Give us a call for more details or to place an order</CateringText>
+            <CateringHeader>Available for all events</CateringHeader>
+            <BannerImage src={'/catering.webp'}></BannerImage>
+            <CateringText>We provide a variety of catering packages for all events. Give us a call to find out more or to place an order.</CateringText>
             <CallButton href={'tel:9099062045'}>Call Now</CallButton>
             
         </CateringContainer>

@@ -11,6 +11,7 @@ import {
 import HamburgerIcon from './hamburgerIcon';
 import links from '../../data/nav_links.json'
 import { useState } from 'react';
+import Image from 'next/image'
 export const NavBar = () => {
     //hook to control opening/closing dropdown menu when user clicks on hamburger icon
     const [display, setDisplay] = useState('none');
@@ -37,7 +38,7 @@ export const NavBar = () => {
                 ))}
             </MobileListContainer>
             <NavBarLogo>
-                <img style={{width: "50px", height: "48px", }} alt="Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
+                <Image width='50px' height='48px' alt="Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
             </NavBarLogo>
             <NavBarItems>
                 {links.map((link) => (

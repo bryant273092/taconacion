@@ -6,11 +6,13 @@ export const BannerContainer = styled(FlexColumn)`
     height: auto;
     background-image: url(/grill.webp);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom left;
 `
 export const BannerHeader = styled.h1`
     width: auto;
     color: white;
-    margin-top: 7.5%;
+    margin-top: ${(props) => props.topMargin|| "7.5%"};
     text-align: center;
     border-radius: 20px;
     font-size: 3.2em;
@@ -53,8 +55,8 @@ export const BannerButton = styled.a`
 `
 export const ImageFilter = styled.div`
     width: 100%;
-    
-    background-color: rgba(0, 0, 0, 0.5);
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.65);
 `
 export const ImageContainer = styled(FlexColumn)`
     width: 100%;

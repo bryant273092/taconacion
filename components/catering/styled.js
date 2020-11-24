@@ -8,19 +8,20 @@ export const CateringContainer = styled(FlexColumn)`
     border-radius: 25px;
 ` 
 export const CateringHeader = styled.h2`
-    color: white;
+    color: #ee971c;
     width: 100%;
     text-align: center;
 `
 export const BannerImage = styled.img`
     width: 60%; 
     margin: 0px auto;
+    border-radius: 5px;
     @media (max-width: 850px) {
         width: 70%
     } ;
 `
 export const CateringText = styled.h4`
-    color: #ee971c;
+    color: white;
     width: 100%;
     text-align: center;
 `

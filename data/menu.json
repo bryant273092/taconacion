@@ -129,7 +129,7 @@
             },
             {
                 "name" : "TN Fries",
-                "description" : "choice of meat, beans, pico, cheese, sourcream, guac",
+                "description" : "Choice of meat, beans, pico, cheese, sourcream, guac",
                 "price" : "$10.95",
                 "image" : ""
             },
@@ -155,6 +155,30 @@
                 "name" : "Taquitos",
                 "description" : "Three rolled fried tortillas, shredded beef or chicken, lettuce, sour cream, cheese, guac, pico de gallo",
                 "price" : "$6.95",
+                "image" : ""
+            },
+            {
+                "name" : "Salad",
+                "description" : "Choice of meat, lettuce, onion, tomato, cheese, avocado",
+                "price" : "$8.95",
+                "image" : ""
+            },
+            {
+                "name" : "Bean, Rice and Cheese Burrito",
+                "description" : "Flower Tortilla, beans, rice, cheese",
+                "price" : "$5.95",
+                "image" : ""
+            },
+            {
+                "name" : "Bean and Cheese Burrito",
+                "description" : "Flower Tortilla, rice, cheese",
+                "price" : "$4.95",
+                "image" : ""
+            },
+            {
+                "name" : "Chile Relleno Burrito",
+                "description" : "Flower Tortilla, rice, beans, cilantro, onion, salsa, chile relleno",
+                "price" : "$7.95",
                 "image" : ""
             }
         ],

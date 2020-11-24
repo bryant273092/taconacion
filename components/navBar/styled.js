@@ -10,6 +10,7 @@ export const NavBarContainer = styled(FlexRow)`
     background-color: black;
     position: sticky;
     top: 0;
+    justify-content: space-between;
 `;
 export const NavBarLogo = styled(FlexRow)`
     overflow: hidden;
