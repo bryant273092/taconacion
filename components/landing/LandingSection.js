@@ -14,7 +14,7 @@ export const LandingSection = () => {
                         <BannerHeader >Want Catering At Your Next Event?</BannerHeader>
                         <HeaderThree> Contact us for more info or to place an order</HeaderThree>
                         <BannerButtonGrid>
-                            <Button>
+                            <Button title= "Call Taco Nacion"href={'tel:9099062045'}>
                                 Call Now
                             </Button>
                         </BannerButtonGrid>

@@ -9,7 +9,7 @@ export const Map = () => {
             <HeaderTwo>Where to find us</HeaderTwo>
             <HeaderThree>Located at the Milliken Business Center in Ontario</HeaderThree>
             <Image src={'/taco_nacion_physical.jpg'} />
-            <Button>Get Directions</Button>
+            <Button title="Directions to Taco Nacion"href={"https://maps.apple.com/?address=1119%20S%20Milliken%20Ave,%20Unit%20G,%20Ontario,%20CA%20%2091761,%20United%20States&auid=18390287420442012809&ll=34.052728,-117.557599&lsp=9902&q=Taco%20Nacion&_ext=ChkKBQgEEOIBCgQIBRADCgQIBhAUCgQIChAAEiYpCSJBmCwGQUAxwU38hAhkXcA5h/dm9FIHQUBBN9fE4FZjXcBQBA%3D%3D"}>Get Directions</Button>
             <Text><a href={"https://maps.apple.com/?address=1119%20S%20Milliken%20Ave,%20Unit%20G,%20Ontario,%20CA%20%2091761,%20United%20States&auid=18390287420442012809&ll=34.052728,-117.557599&lsp=9902&q=Taco%20Nacion&_ext=ChkKBQgEEOIBCgQIBRADCgQIBhAUCgQIChAAEiYpCSJBmCwGQUAxwU38hAhkXcA5h/dm9FIHQUBBN9fE4FZjXcBQBA%3D%3D"}>1119 S Milliken Ave STE G, Ontario, CA 91761</a></Text>
             <HeaderThree>Hours</HeaderThree>
             <HoursContainer>
