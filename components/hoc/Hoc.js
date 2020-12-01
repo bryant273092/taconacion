@@ -1,20 +1,19 @@
 import Head from 'next/head'
 import NavBar from '../navBar';
 import Footer from '../footer';
+import { DefaultSeo } from 'next-seo';
+import config from '../../config/seo.json';
+
 
 
 export const HOC = (Content) => {
     const WrappedComponent = (props) => {
         return (
             <>
-                <Head>
-                    <title>Taco Nacion</title>
-                </Head>
+                <DefaultSeo {...config} />
                 <NavBar />
                 <Content {...props} />
                 <Footer />
-                
-
             </>
         );
     };

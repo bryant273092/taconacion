@@ -32,18 +32,18 @@ export const NavBar = () => {
             </HamburgerIconDiv>
             <MobileListContainer display={display}>
                 {links.map((link) => (
-                    <DropDownItem key={link.name} href={link.href}>
+                    <DropDownItem key={link.name} title={"Go To " + link.name } href={link.href}>
                         {link.name}
                     </DropDownItem>
                 ))}
             </MobileListContainer>
             <NavBarLogo>
-                <Image width='50px' height='48px' alt="Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
+                <Image width='50px' height='48px' alt="An image of the Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
             </NavBarLogo>
             <NavBarItems>
                 {links.map((link) => (
                     <NavBarItem key={link.name}>
-                        <NavBarButton key={link.name} href={link.href}>
+                        <NavBarButton title={"Go To " + link.name} key={link.name} href={link.href}>
                             {link.name}
                         </NavBarButton>
                     </NavBarItem>

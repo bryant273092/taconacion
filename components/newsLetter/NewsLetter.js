@@ -1,7 +1,7 @@
 export const NewsLetter = () => {
     return (
         <>
-            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css" />
+            <link title="Signup for the Taco Nacion Newsletter" href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css" />
                 <div id="mc_embed_signup" style={{ clear:"left", font:"14px", width:"100%"}}>
                     <form action="https://gmail.us7.list-manage.com/subscribe/post?u=d4c5dfb731af614907a5cf86e&amp;id=666c1d3857" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                         <div id="mc_embed_signup_scroll">

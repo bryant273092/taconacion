@@ -31,7 +31,7 @@ export const HeaderThree = styled.h3`
 `
 export const Button = styled.a`
     width: 50%;
-    margin: 25px auto; 
+    margin: 15px auto; 
     color: white;
     text-align: center;
     border-radius: 10px;
@@ -71,6 +71,7 @@ export const Grid = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     margin: 0px auto;
     padding: 0px 5px;
+    grid-column-gap: 7px;
 `
 export const Content = styled(FlexColumn)`
     height: 100%;

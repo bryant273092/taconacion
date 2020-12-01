@@ -25,7 +25,7 @@ export const Footer = () => {
                 <FooterItem>
                     <FooterHeader>Location & Hours</FooterHeader>
                     
-                    <CallButton href="https://maps.apple.com/?address=1119%20S%20Milliken%20Ave,%20Unit%20G,%20Ontario,%20CA%20%2091761,%20United%20States&auid=18390287420442012809&ll=34.052728,-117.557599&lsp=9902&q=Taco%20Nacion&_ext=ChkKBQgEEOIBCgQIBRADCgQIBhAUCgQIChAAEiYpCSJBmCwGQUAxwU38hAhkXcA5h/dm9FIHQUBBN9fE4FZjXcBQBA%3D%3D">Get Directions</CallButton>
+                    <CallButton title="Find Directions for Taco Nacion Location in Ontario"href="https://maps.apple.com/?address=1119%20S%20Milliken%20Ave,%20Unit%20G,%20Ontario,%20CA%20%2091761,%20United%20States&auid=18390287420442012809&ll=34.052728,-117.557599&lsp=9902&q=Taco%20Nacion&_ext=ChkKBQgEEOIBCgQIBRADCgQIBhAUCgQIChAAEiYpCSJBmCwGQUAxwU38hAhkXcA5h/dm9FIHQUBBN9fE4FZjXcBQBA%3D%3D">Get Directions</CallButton>
                     <HoursContainer>
                         <Days>
                             <DaysText>Mon-Fri</DaysText>
@@ -41,8 +41,8 @@ export const Footer = () => {
                 </FooterItem>
                 <FooterItem>
                     <FooterHeader>Contact</FooterHeader>
-                    <CallButton href="tel:9099062045">Call Now</CallButton>
-                    <FooterButton href="tel:9099062045"> (909)906-2045</FooterButton>
+                    <CallButton title="Call Taco Nacion Ontario Location" href="tel:9099062045">Call Now</CallButton>
+                    <FooterButton title="Call Taco Nacion Ontario Location" href="tel:9099062045"> (909)906-2045</FooterButton>
                 </FooterItem>
                 
             </FooterItems>
@@ -50,7 +50,7 @@ export const Footer = () => {
                 <NewsLetter></NewsLetter>
             </FooterItem>
             <FooterItem>
-                <CopyRight >@ Copyright 2020 by <FooterButton href="//bryanth.dev">DreamWare LLC.</FooterButton></CopyRight>
+                <CopyRight >@ Copyright 2020 by <FooterButton title="Go to DreamWare LLC's Page"href="//bryanth.dev">DreamWare LLC.</FooterButton></CopyRight>
             </FooterItem>
         </FooterContainer>
     )

@@ -1,0 +1,16 @@
+{
+    "title": "Taco Nacion Ontario",
+    "description": "Taco Nacion Restuarant in Ontario is now serving your favorite Mexican dishes and Beer as Tap or Draft to go along the next sporting event.",
+    "openGraph": {
+      "type": "website",
+      "locale": "en_US",
+      "url": "https://taco-nacion.com/",
+      "site_name": "Taco Nacion Ontario Mexican Resturant and Bar",
+      "images": [
+        {
+          "url": "url(/taco_nacion_logo.webp)",
+          "alt": "Taco Nacion Restuarant Logo"
+        }
+      ]
+    }
+}

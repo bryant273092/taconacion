@@ -10,8 +10,8 @@ export const Banner = () => {
                 
                 <BannerText>Authentic Mexican Food</BannerText>
                 <BannerButtonGrid>
-                    <BannerButton href='/menu'>View Menu</BannerButton>
-                    <BannerButton href='/order'>Order Online</BannerButton>
+                    <BannerButton title="View Menu for Taco Nacion"href='/menu'>View Menu</BannerButton>
+                    <BannerButton title="Order Online from Taco Nacion"href='/order'>Order Online</BannerButton>
                 </BannerButtonGrid>
             </ImageFilter>
         </BannerContainer>

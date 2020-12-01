@@ -6,15 +6,15 @@ import LandingSection from '../components/landing'
 
 const WrappedComponents = () => {
   return (
-    <>
+    <div>
       <html lang="en" />
       <Banner />
       <LandingSection />
-    </>
+    </div>
   )
 }
 export default function Home() {
-  
+
   const Page = HOC(WrappedComponents)
   return (
     <>
