@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: https://taco-nacion.com/sitemap.xml
