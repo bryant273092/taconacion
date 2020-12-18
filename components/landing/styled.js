@@ -17,7 +17,6 @@ export const TextGrid = styled(FlexColumn)`
 `
 export const List = styled.ul`
     width: 100%;
-    height: 60%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: auto;
@@ -30,4 +29,12 @@ export const ListItem = styled.h5`
     font-size: 25px;
     margin: 20px 5px;
     text-align: center;
+`
+export const RowContainer = styled(FlexRow)`
+    width: 90%;
+    align-items: center;
+    margin: 20px auto;
+    @media (max-width: 640px) {
+        flex-direction: column;
+    }
 `

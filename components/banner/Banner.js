@@ -1,17 +1,21 @@
-import {BannerContainer, BannerHeader, BannerText, BannerButtonGrid, BannerButton, ImageFilter, ImageContainer, Image} from './styled';
-
+import { BannerContainer, BannerHeader, BannerText, BannerButtonGrid, BannerButton, ImageFilter, ImageContainer, Image } from './styled';
+import Link from 'next/link';
 export const Banner = () => {
-    return(
+    return (
         <BannerContainer>
             <ImageFilter>
                 <ImageContainer>
-                    <Image alt="Taco Nacion Logo" src={'taco_nacion_logo.webp'}/>
+                    <Image alt="Taco Nacion Logo" src={'taco_nacion_logo.webp'} />
                 </ImageContainer>
-                
+
                 <BannerText>Authentic Mexican Food</BannerText>
                 <BannerButtonGrid>
-                    <BannerButton title="View Menu for Taco Nacion"href='/menu'>View Menu</BannerButton>
-                    <BannerButton title="Order Online from Taco Nacion"href='/order'>Order Online</BannerButton>
+                    <Link title="View Menu for Taco Nacion" href='/menu'>
+                        <BannerButton >View Menu</BannerButton>
+                    </Link>
+                    <Link title="Order Online from Taco Nacion" href='/order'>
+                        <BannerButton >Order Online</BannerButton>
+                    </Link>
                 </BannerButtonGrid>
             </ImageFilter>
         </BannerContainer>

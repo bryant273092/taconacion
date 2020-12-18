@@ -1,13 +1,21 @@
-import { faRProject } from '@fortawesome/free-brands-svg-icons';
-import Home from '../../pages';
-import { Container, Grid, HeaderOne, HeaderTwo, HeaderThree, Button, Content, Text } from '../layout';
-import { HomeBanner, TextGrid, List, ListItem } from './styled'
+
+import { Container, Grid, HeaderOne, HeaderTwo, HeaderThree, Button, Content, Text, Image } from '../layout';
+import { HomeBanner, TextGrid, List, ListItem, RowContainer } from './styled'
 import { ImageFilter, BannerButtonGrid, BannerHeader } from '../banner/styled'
 
 
 export const LandingSection = () => {
     return (
         <Container color={"transparent"} style={{ marginTop: "100px" }}>
+            <Container style={{ width: "100%", marginBottom: '50px', paddingBottom: '50px' }}>
+                <BannerHeader>Patio Dining Available</BannerHeader>
+                <RowContainer>
+                    <Image style={{ width: "60%", borderRadius: "10px" }} src={'/taco_nacion_physical.jpg'} />
+                    <HeaderThree style={{ paddingLeft: '20px', lineHeight:"1.6" }}>Taco Nacion is now offering outdoor dining. We are compliant with local and state COVID-19 regulations and rules. Enjoy a delicious meal or a beer while watching your favorite sport team on our outdoor patio. </HeaderThree>
+                </RowContainer>
+
+                <Button title="Directions to Taco Nacion" href={"https://maps.apple.com/?address=1119%20S%20Milliken%20Ave,%20Unit%20G,%20Ontario,%20CA%20%2091761,%20United%20States&auid=18390287420442012809&ll=34.052728,-117.557599&lsp=9902&q=Taco%20Nacion&_ext=ChkKBQgEEOIBCgQIBRADCgQIBhAUCgQIChAAEiYpCSJBmCwGQUAxwU38hAhkXcA5h/dm9FIHQUBBN9fE4FZjXcBQBA%3D%3D"}>Get Directions</Button>
+            </Container>
             <HomeBanner image={"url(/taco_beer.webp)"}>
                 <ImageFilter>
                     <TextGrid>

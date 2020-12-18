@@ -46,9 +46,9 @@ export const Footer = () => {
                 </FooterItem>
                 
             </FooterItems>
-            <FooterItem>
+            {/* <FooterItem>
                 <NewsLetter></NewsLetter>
-            </FooterItem>
+            </FooterItem> */}
             <FooterItem>
                 <CopyRight >@ Copyright 2020 by <FooterButton title="Go to DreamWare LLC's Page"href="//bryanth.dev">DreamWare LLC.</FooterButton></CopyRight>
             </FooterItem>

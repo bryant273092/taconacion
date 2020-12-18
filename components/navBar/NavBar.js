@@ -11,7 +11,8 @@ import {
 import HamburgerIcon from './hamburgerIcon';
 import links from '../../data/nav_links.json'
 import { useState } from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link'
 export const NavBar = () => {
     //hook to control opening/closing dropdown menu when user clicks on hamburger icon
     const [display, setDisplay] = useState('none');
@@ -32,7 +33,7 @@ export const NavBar = () => {
             </HamburgerIconDiv>
             <MobileListContainer display={display}>
                 {links.map((link) => (
-                    <DropDownItem key={link.name} title={"Go To " + link.name } href={link.href}>
+                    <DropDownItem key={link.name} title={"Go To " + link.name} href={link.href}>
                         {link.name}
                     </DropDownItem>
                 ))}
@@ -43,9 +44,12 @@ export const NavBar = () => {
             <NavBarItems>
                 {links.map((link) => (
                     <NavBarItem key={link.name}>
-                        <NavBarButton title={"Go To " + link.name} key={link.name} href={link.href}>
-                            {link.name}
-                        </NavBarButton>
+                        <Link title={"Go To " + link.name} key={link.name} href={link.href}>
+                            <NavBarButton >
+                                {link.name}
+                            </NavBarButton>
+                        </Link>
+
                     </NavBarItem>
                 ))}
             </NavBarItems>

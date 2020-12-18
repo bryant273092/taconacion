@@ -36,7 +36,7 @@ export const Button = styled.a`
     text-align: center;
     border-radius: 10px;
     font-size: 25px;
-    background-color: rgba(238, 151, 28, 0.7);
+    background-color: ${(props) => props.color || 'rgba(238, 151, 28, 1)' };
     padding: ${(props) => props.padding|| "10px 0px"};
     @media (max-width: 850px) {
         font-size: 1em;
@@ -63,6 +63,7 @@ export const Text = styled.p`
         width: 50%;
         
     } ;
+    line-height: 1.5;
     
 `
 export const Grid = styled.div`
@@ -77,4 +78,10 @@ export const Content = styled(FlexColumn)`
     height: 100%;
     margin: auto 0px;
     justify-content: center;
+`
+export const CenteredDiv = styled(FlexColumn)`
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    width: 100%;
 `
