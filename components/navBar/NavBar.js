@@ -39,7 +39,7 @@ export const NavBar = () => {
                 ))}
             </MobileListContainer>
             <NavBarLogo>
-                <Image width='50px' height='48px' alt="An image of the Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
+                <Image width={50} height={48} alt="An image of the Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
             </NavBarLogo>
             <NavBarItems>
                 {links.map((link) => (

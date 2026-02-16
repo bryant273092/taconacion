@@ -38,9 +38,11 @@ export const BannerText = styled(BannerHeader)`
 `
 export const BannerButtonGrid = styled(FlexRow)`
     width: 55%;
-    margin: 15px auto;
+    margin: 25px auto;
+    justify-content:center;
+    align-items: center;
     @media (max-width: 640px) {
-        flex-direction: column;
+        flex-direction: row;
         width: 60%
     } ;
 `
@@ -52,7 +54,7 @@ export const BannerButton = styled.a`
     border-radius: 10px;
     font-size: 25px;
     background-color: rgba(238, 151, 28, 0.7);
-    padding: 10px 0px;
+    padding: 15px 10px;
     @media (max-width: 500px) {
         font-size: 1em;
     } ;

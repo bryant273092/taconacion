@@ -4,26 +4,26 @@
         "items" : [
             {
                 "name" : "Burrito",
-                "description" : "Choice of meat, egg, beans, potato, beans, cheese",
-                "price" : "$7.95",
+                "description" : "Choice of meat, egg, potato, beans, cheese",
+                "price" : "$10.95",
                 "image" : ""
             },
             {
                 "name" : "Bowl",
-                "description" : "Choice of meat, egg, beans, potato, beans, cheese",
-                "price" : "$7.95",
+                "description" : "Choice of meat, egg, potato, beans, cheese",
+                "price" : "$10.95",
                 "image" : ""
             },
             {
                 "name" : "Plate",
-                "description" : "Choice of meat, egg, beans, potato, beans, cheese, tortillas",
-                "price" : "$9.95",
+                "description" : "Choice of meat, egg, potato, beans, cheese, tortillas",
+                "price" : "$12.95",
                 "image" : ""
             },
             {
                 "name" : "Chilaquiles",
-                "description" : "Red salsa, egg, potato, sour cream, beans, rice",
-                "price" : "$9.95",
+                "description" : "Red salsa, egg, cheese, sour cream, beans, rice",
+                "price" : "$13.95",
                 "image" : ""
             }
         ],
@@ -35,52 +35,64 @@
             {
                 "name" : "Fish Taco",
                 "description" : "Battered, cabbage, pico de gallo, chipotle dressing",
-                "price" : "$3.25",
+                "price" : "$3.75",
                 "image" : ""
             },
             {
                 "name" : "Shrimp Taco",
                 "description" : "Grilled, cabbage, pico de gallo, chipotle dressing",
-                "price" : "$3.25",
+                "price" : "$3.95",
                 "image" : ""
             },
             {
                 "name" : "Taco Gobernador",
                 "description" : "Corn tortilla, shrimp, melted cheese, cabbage, pico de gallo, chipotle dressing",
-                "price" : "$4.95",
+                "price" : "$5.95",
                 "image" : ""
             },
             {
                 "name" : "Shrimp Burrito",
-                "description" : "rice, beans, pico de gallo, cabbage, chhese, chipotle dressing",
-                "price" : "$9.95",
+                "description" : "Rice, beans, pico de gallo, cabbage, cheese, chipotle dressing",
+                "price" : "$12.95",
                 "image" : ""
             },
             {
                 "name" : "Shrimp Bowl",
-                "description" : "Rice, beans, lettuce, pico de gallo, cabbbage, cheese, chipotle dressing",
-                "price" : "$9.95",
+                "description" : "Rice, beans, lettuce, pico de gallo, cabbage, cheese, chipotle dressing",
+                "price" : "$12.95",
                 "image" : ""
             },
             {
                 "name" : "Fish Burrito",
                 "description" : "Rice, beans, pico de gallo, cabbage, cheese, chipotle dressing",
-                "price" : "$8.95",
+                "price" : "$11.95",
                 "image" : ""
             },
             {
                 "name" : "Shrimp Quesadilla",
                 "description" : "Melted cheese, lettuce, pico de gallo, chipotle sauce",
-                "price" : "$9.95",
+                "price" : "$13.95",
                 "image" : ""
             },
             {
                 "name" : "Surf & Turf Burrito",
                 "description" : "asada, shrimp, rice, beans, pico de gallo, chipotle dressing",
-                "price" : "$11.95",
+                "price" : "$14.95",
                 "image" : ""
             }
         ]
+    },
+    {
+        "category" : "Birria Ramen",
+        "items" : [
+            {
+                "name" : "",
+                "description" : "Savory birria consome with traditional ramen noodles and beef, onion, cilantro",
+                "price" : "$12.95",
+                "image" : ""
+            }
+        ],
+        "description": "Served everyday"
     },
     {
         "category" : "Pick Your Dish",
@@ -88,97 +100,73 @@
             {
                 "name" : "Burrito",
                 "description" : "Flour tortilla, choice of meat, beans, rice, onion, cilantro, salsa. wet style + $2.95",
-                "price" : "$7.95",
+                "price" : "$10.95",
                 "image" : ""
             },
             {
                 "name" : "California Burrito",
                 "description" : "choice of meat, fries, beans, cheese, pico, sour cream, guac",
-                "price" : "$9.95",
+                "price" : "$12.95",
                 "image" : ""
             },
             {
                 "name" : "Bowl",
                 "description" : "choice of meat, beans, rice, lettuce, cheese, pico de gallo, sour cream",
-                "price" : "$7.95",
+                "price" : "$10.95",
                 "image" : ""
             },
             {
                 "name" : "Hard Shell Taco",
                 "description" : "shredded beef or chicken, lettuce, pico de gallo, cheese. potato, cabbage, pico de gallo, cheese",
-                "price" : "$2.95",
+                "price" : "$3.75",
                 "image" : ""
             },
             {
                 "name" : "Quesadilla",
                 "description" : "Melted cheese, lettuce, pico de gallo, sour cream. add meat + $3.00",
-                "price" : "$5.95",
+                "price" : "$7.95",
                 "image" : ""
             },
             {
                 "name" : "Sope",
                 "description" : "Beans, choice of meat, lettuce, pico de gallo, cheese, sour cream",
-                "price" : "$3.45",
+                "price" : "$4.45",
                 "image" : ""
             },
             {
                 "name" : "Soft Taco",
                 "description" : "Choice of meat, onion, cilantro, salsa",
-                "price" : "$1.85",
+                "price" : "$2.25",
                 "image" : ""
             },
             {
                 "name" : "TN Fries",
-                "description" : "Choice of meat, beans, pico, cheese, sourcream, guac",
-                "price" : "$10.95",
+                "description" : "Choice of meat, beans, pico, cheese, sour cream, guac",
+                "price" : "$14.95",
                 "image" : ""
             },
             {
                 "name" : "Tostada Salad",
                 "description" : "Tortilla bowl, choice of meat, lettuce, beans, rice, pico de gallo, cheese, sour cream",
-                "price" : "$8.95",
+                "price" : "$10.95",
                 "image" : ""
             },
             {
                 "name" : "Torta",
-                "description" : "Talera roll, choice of meat, lettuce, tomato, onion, beans, guac, cheese",
-                "price" : "$7.45",
+                "description" : "Telera roll, choice of meat, lettuce, tomato, onion, beans, guac, cheese",
+                "price" : "$10.95",
                 "image" : ""
             },
             {
                 "name" : "Nachos",
-                "description" : "Tortilla chips, beans, cheese, guac, sour cream, pico de gallo. add meat + $3.00",
-                "price" : "$6.95",
+                "description" : "Tortilla chips, beans, cheese, guac, sour cream, pico de gallo. add meat + $3.92",
+                "price" : "$9.95",
                 "image" : ""
             },
             {
                 "name" : "Taquitos",
                 "description" : "Three rolled fried tortillas, shredded beef or chicken, lettuce, sour cream, cheese, guac, pico de gallo",
-                "price" : "$6.95",
-                "image" : ""
-            },
-            {
-                "name" : "Salad",
-                "description" : "Choice of meat, lettuce, onion, tomato, cheese, avocado",
                 "price" : "$8.95",
-                "image" : ""
-            },
-            {
-                "name" : "Bean, Rice and Cheese Burrito",
-                "description" : "Flower Tortilla, beans, rice, cheese",
-                "price" : "$5.95",
-                "image" : ""
-            },
-            {
-                "name" : "Bean and Cheese Burrito",
-                "description" : "Flower Tortilla, rice, cheese",
-                "price" : "$4.95",
-                "image" : ""
-            },
-            {
-                "name" : "Chile Relleno Burrito",
-                "description" : "Flower Tortilla, rice, beans, cilantro, onion, salsa, chile relleno",
-                "price" : "$7.95",
                 "image" : ""
             }
         ],
@@ -190,59 +178,59 @@
             {
                 "name" : "Street Taco Combo",
                 "description" : "3 street tacos",
-                "price" : "$9.99",
+                "price" : "$12.95",
                 "image" : ""
             },
             {
                 "name" : "Hard Shell Taco Combo",
                 "description" : "2 hard shell tacos. beef • chicken • potato (w/cabbage) ",
-                "price" : "$9.99",
+                "price" : "$12.95",
                 "image" : ""
             },
             {
                 "name" : "Taquitos Combo",
                 "description" : "3 taquitos | beef • chicken",
-                "price" : "$9.99",
+                "price" : "$13.95",
                 "image" : ""
             },
             {
                 "name" : "2 Shrimp Taco Combo",
                 "description" : "Grilled",
-                "price" : "$10.99",
+                "price" : "$14.95",
                 "image" : ""
             },
             {
                 "name" : "2 Fish Taco Combo",
                 "description" : "Battered",
-                "price" : "$9.99",
+                "price" : "$13.95",
                 "image" : ""
             },
             {
                 "name" : "Chile Relleno Combo",
                 "description" : "Stuffed pasilla pepper, tortillas",
-                "price" : "$11.99",
+                "price" : "$14.95",
                 "image" : ""
             },
             {
                 "name" : "Birria Combo",
                 "description" : "Tortillas",
-                "price" : "$10.99",
+                "price" : "$15.95",
                 "image" : ""
             },
             {
                 "name" : "Asada Combo",
                 "description" : "Guac, pico, tortillas",
-                "price" : "$10.99",
+                "price" : "$15.95",
                 "image" : ""
             },
             {
                 "name" : "TN Combo",
                 "description" : "Choice of chicken, al pastor, or carnitas",
-                "price" : "$9.99",
+                "price" : "$13.95",
                 "image" : ""
             }
         ],
-        "description" : "Served with rice, beans, medium soft drink"
+        "description" : "Served with rice, beans, sm soft drink"
     },
     {
         "category" : "Sides",
@@ -250,13 +238,13 @@
             {
                 "name" : "Fries",
                 "description" : "",
-                "price" : "$2.99",
+                "price" : "$3.95",
                 "image" : ""
             },
             {
-                "name" : "Guacamole",
+                "name" : "Guac",
                 "description" : "",
-                "price" : "$2.99",
+                "price" : "$3.95",
                 "image" : ""
             },
             {
@@ -268,13 +256,13 @@
             {
                 "name" : "Chips & Salsa",
                 "description" : "",
-                "price" : "$2.99",
+                "price" : "$2.95",
                 "image" : ""
             },
             {
                 "name" : "Rice & Beans",
                 "description" : "",
-                "price" : "$2.99",
+                "price" : "$2.95",
                 "image" : ""
             },
             {
@@ -291,13 +279,13 @@
             {
                 "name" : "Medium",
                 "description" : "",
-                "price" : "$2.49",
+                "price" : "$2.95",
                 "image" : ""
             },
             {
                 "name" : "Large",
                 "description" : "",
-                "price" : "$2.99",
+                "price" : "$3.45",
                 "image" : ""
             }
         ]
@@ -308,13 +296,13 @@
             {
                 "name" : "Medium",
                 "description" : "",
-                "price" : "$2.99",
+                "price" : "$3.45",
                 "image" : ""
             },
             {
                 "name" : "Large",
                 "description" : "",
-                "price" : "$3.49",
+                "price" : "$3.95",
                 "image" : ""
             }
         ]
