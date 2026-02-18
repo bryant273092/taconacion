@@ -31,15 +31,17 @@ export const NavBar = () => {
             <HamburgerIconDiv onClick={changeDisplay}>
                 <HamburgerIcon />
             </HamburgerIconDiv>
-            <MobileListContainer display={display}>
+            <MobileListContainer $display={display}>
                 {links.map((link) => (
-                    <DropDownItem key={link.name} title={"Go To " + link.name} href={link.href}>
-                        {link.name}
-                    </DropDownItem>
+                    <Link key={link.name} title={"Go To " + link.name} href={link.href}>
+                        <DropDownItem>
+                            {link.name}
+                        </DropDownItem>
+                    </Link>
                 ))}
             </MobileListContainer>
             <NavBarLogo>
-                <Image width={50} height={48} alt="An image of the Taco Nacion Logo" src={"/taco_nacion_logo.webp"} />
+                <Image width={50} height={48} alt="An image of the Taco Nacion Logo" src={"/taco_nacion_logo.webp"} priority />
             </NavBarLogo>
             <NavBarItems>
                 {links.map((link) => (
