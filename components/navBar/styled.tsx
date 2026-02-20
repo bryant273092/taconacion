@@ -28,7 +28,7 @@ export const NavBarItem = styled(FlexRow)`
     width: 100%;
     flex-direction: column;
 `;
-export const NavBarButton = styled.a`
+export const NavBarButton = styled.span`
     color: white;
     font-size: 17px;
     text-align: center;
@@ -64,7 +64,10 @@ export const DropDownItem = styled(NavBarButton)`
     border-bottom: 1px solid #f57b48 !important;
     margin: auto 0px;
 `;
-export const MobileListContainer = styled(FlexColumn)`
+interface MobileListContainerProps {
+    $display?: string;
+}
+export const MobileListContainer = styled(FlexColumn)<MobileListContainerProps>`
     background-color: black;
     flex-direction: column;
     position: absolute;
@@ -73,7 +76,7 @@ export const MobileListContainer = styled(FlexColumn)`
     left: 0px;
     right: 0px;
     width: 100%;
-    display: ${(props) => props.display || 'none'};
+    display: ${(props) => props.$display || 'none'};
     @media (min-width: 1025px) {
         display: none;
     } ;

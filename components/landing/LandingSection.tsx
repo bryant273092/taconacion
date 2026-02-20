@@ -9,8 +9,8 @@ import {
   Text,
   Image,
 } from "../layout";
-import { HomeBanner, TextGrid, List, ListItem, RowContainer } from "./styled";
-import { ImageFilter, BannerButtonGrid, BannerHeader } from "../banner/styled";
+import { HomeBanner, TextGrid, List, ListItem, RowContainer, LandingSectionHeader } from "./styled";
+import { ImageFilter, BannerButtonGrid } from "../banner/styled";
 
 export const LandingSection = () => {
   return (
@@ -18,7 +18,7 @@ export const LandingSection = () => {
       <Container
         style={{ width: "100%", marginBottom: "50px", paddingBottom: "50px" }}
       >
-        <BannerHeader>Patio Dining Available</BannerHeader>
+        <LandingSectionHeader>Patio Dining Available</LandingSectionHeader>
         <RowContainer>
           <Image
             style={{ width: "60%", borderRadius: "10px" }}
@@ -41,12 +41,12 @@ export const LandingSection = () => {
           Get Directions
         </Button>
       </Container>
-      <HomeBanner image={"url(/taco_beer.webp)"}>
+      <HomeBanner $image={"url(/taco_beer.webp)"}>
         <ImageFilter>
           <TextGrid>
-            <BannerHeader topMargin="1%">
+            <LandingSectionHeader $topMargin="1%">
               Now Serving Tap and Draft Beer
-            </BannerHeader>
+            </LandingSectionHeader>
             <List>
               <ListItem>Golden Cart</ListItem>
               <ListItem>Bud Light</ListItem>
@@ -59,12 +59,12 @@ export const LandingSection = () => {
               <ListItem>Sol</ListItem>
               <ListItem>Tecate</ListItem>
             </List>
-            <BannerHeader style={{ marginBottom: "20px" }} topMargin="10%">
+            <LandingSectionHeader style={{ marginBottom: "20px" }} $topMargin="10%">
               Happy Hour: All Draft Beer
-            </BannerHeader>
-            <BannerHeader style={{ color: "#ee971c" }} topMargin="0">
+            </LandingSectionHeader>
+            <LandingSectionHeader style={{ color: "#ee971c" }} $topMargin="0">
               $4.99
-            </BannerHeader>
+            </LandingSectionHeader>
             <HeaderTwo>2PM - Closing</HeaderTwo>
             <HeaderThree>16oz Only</HeaderThree>
           </TextGrid>
@@ -74,7 +74,7 @@ export const LandingSection = () => {
       <HomeBanner>
         <ImageFilter>
           <Content>
-            <BannerHeader>Want Catering At Your Next Event?</BannerHeader>
+            <LandingSectionHeader>Want Catering At Your Next Event?</LandingSectionHeader>
             <HeaderThree>
               {" "}
               Contact us for more info or to place an order

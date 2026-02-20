@@ -8,18 +8,30 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
-    "bootstrap": "^4.5.3",
-    "next": "^13.4.16",
-    "next-seo": "^4.17.0",
-    "react": "18.2.0",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "18.2.0",
-    "react-mailchimp-subscribe": "^2.1.0",
-    "react-modal": "^3.12.1",
-    "styled-components": "^5.2.1"
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.2.0",
+    "next": "^15.5.12",
+    "next-seo": "^7.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "styled-components": "^6.3.9"
+  },
+  "browserslist": [
+    "chrome >= 92",
+    "firefox >= 90",
+    "safari >= 15.4",
+    "edge >= 92",
+    "ios_saf >= 15.4",
+    "samsung >= 16",
+    "opera >= 78"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/styled-components": "^5.1.36",
+    "typescript": "^5.9.3"
   }
 }

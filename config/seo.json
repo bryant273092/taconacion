@@ -1,15 +1,17 @@
 {
-    "title": "Taco Nacion: Mexican Restuarant",
-    "description": "Taco Nacion Taco Restuarant in Ontario is now serving your favorite Mexican dishes and beer. Now offering outdoor patio dining and the next sporting event.",
+    "title": "Taco Nacion: Mexican Restaurant",
+    "description": "Taco Nacion Mexican Restaurant in Ontario is now serving your favorite Mexican dishes and beer. Now offering outdoor patio dining and the next sporting event.",
     "openGraph": {
       "type": "website",
       "locale": "en_US",
       "url": "https://taco-nacion.com/",
-      "site_name": "Taco Nacion Ontario Mexican Resturant and Bar",
+      "site_name": "Taco Nacion Ontario Mexican Restaurant and Bar",
       "images": [
         {
-          "url": "url(/taco_nacion_logo.webp)",
-          "alt": "Taco Nacion Restuarant Logo"
+          "url": "https://taco-nacion.com/taco_nacion_logo.webp",
+          "width": 800,
+          "height": 600,
+          "alt": "Taco Nacion Restaurant Logo"
         }
       ]
     }

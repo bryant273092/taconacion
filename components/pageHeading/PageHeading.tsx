@@ -1,10 +1,13 @@
 import { HeadingContainer, Line, Heading } from './styled';
 
-export const PageHeading = (props) => {
+interface PageHeadingProps {
+    title: string;
+}
+export const PageHeading = ({ title }: PageHeadingProps) => {
     return (
         <HeadingContainer>
             <Line />
-                <Heading>{props.title}</Heading>
+                <Heading>{title}</Heading>
             <Line />
         </HeadingContainer>
     )

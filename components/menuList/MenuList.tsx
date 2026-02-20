@@ -1,4 +1,4 @@
-import {MenuContainer, MenuNavContainer, MenuButton, ItemListContainer, ItemRow, CategoryHeading, ItemDescription, ItemHeading, ItemPrice, Category, TextContainer, MeatSection, MeatHeading, MeatText, MeatOptions, AltLang, OptionDescription} from './styled';
+import {MenuContainer, MenuNavContainer, MenuButton, ItemListContainer, ItemRow, CategoryHeading, ItemDescription, ItemHeading, ItemPrice, TextContainer, MeatSection, MeatHeading, MeatText, MeatOptions, AltLang, OptionDescription} from './styled';
 import menuItems from '../../data/menu.json'
 
 export const MenuList = () => {
@@ -32,7 +32,7 @@ export const MenuList = () => {
                                         <ItemHeading key={item.name}>{item.name}</ItemHeading>
                                         <ItemDescription key={item.description}>{item.description}</ItemDescription>
                                     </TextContainer>
-                                    <ItemPrice key={item.decription}>{item.price}</ItemPrice>
+                                    <ItemPrice key={item.description}>{item.price}</ItemPrice>
                                 </ItemRow>
                             ))}
                         </div>
