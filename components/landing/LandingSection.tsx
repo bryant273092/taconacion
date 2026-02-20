@@ -23,6 +23,7 @@ export const LandingSection = () => {
           <Image
             style={{ width: "60%", borderRadius: "10px" }}
             src={"/taco_nacion_physical.jpg"}
+            alt="Taco Nacion restaurant exterior with patio dining area in Ontario, California"
           />
           <HeaderThree style={{ paddingLeft: "20px", lineHeight: "1.6" }}>
             Taco Nacion offers outdoor dining. Join us for a delicious
