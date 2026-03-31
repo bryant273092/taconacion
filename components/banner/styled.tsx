@@ -13,10 +13,13 @@ export const BannerContainer = styled(FlexColumn)`
         background-attachment: scroll;
     } ;
 `
-export const BannerHeader = styled.h1`
+interface BannerHeaderProps {
+    $topMargin?: string;
+}
+export const BannerHeader = styled.h1<BannerHeaderProps>`
     width: auto;
     color: white;
-    margin-top: ${(props) => props.topMargin|| "7.5%"};
+    margin-top: ${(props) => props.$topMargin|| "7.5%"};
     text-align: center;
     border-radius: 20px;
     font-size: 3.2em;
@@ -46,10 +49,10 @@ export const BannerButtonGrid = styled(FlexRow)`
         width: 60%
     } ;
 `
-export const BannerButton = styled.a`
+export const BannerButton = styled.span`
     width: 100%;
-    margin: 10px 5px; 
-    color: white;
+    margin: 10px 5px;
+    color: #1a1a1a;
     text-align: center;
     border-radius: 10px;
     font-size: 25px;

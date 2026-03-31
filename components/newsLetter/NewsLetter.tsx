@@ -8,10 +8,10 @@ export const NewsLetter = () => {
                             <label style={{color:"white"}}htmlFor="mce-EMAIL">Subscribe To Our NewsLetter</label>
                             <input type="email" name="EMAIL" className ="email" id="mce-EMAIL" placeholder="Enter Email" required />
                             <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
-                                <input type="text" name="b_d4c5dfb731af614907a5cf86e_666c1d3857" tabIndex="-1" />
+                                <input type="text" name="b_d4c5dfb731af614907a5cf86e_666c1d3857" tabIndex={-1} />
                             </div>
                             <div className="clear" >
-                                <input style={{backgroundColor: "rgba(238, 151, 28, 0.7)", color: "white", borderRadius: "5px", decoration:'none'}} type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/>
+                                <input style={{backgroundColor: "rgba(238, 151, 28, 0.7)", color: "white", borderRadius: "5px", textDecoration:'none'}} type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/>
                             </div>
                         </div>
                     </form>

@@ -8,13 +8,16 @@ export const FlexRow = styled.div`
     display: flex;
     flex-direction: row;
 `
-export const Container = styled(FlexColumn)`
+interface ColorProps {
+    color?: string;
+}
+export const Container = styled(FlexColumn)<ColorProps>`
     width: 90%;
     margin: 0 auto;
     background-color: ${(props) => props.color|| "rgba(0,0,0, 0.6)"};
     border-radius: 25px;
 `
-export const HeaderOne = styled.h1`
+export const HeaderOne = styled.h1<ColorProps>`
     color: ${(props) => props.color|| "white"};
     width: 100%;
     text-align: center;
@@ -29,10 +32,14 @@ export const HeaderThree = styled.h3`
     width: 100%;
     text-align: center;
 `
-export const Button = styled.a`
+interface ButtonProps {
+    color?: string;
+    padding?: string;
+}
+export const Button = styled.a<ButtonProps>`
     width: 50%;
-    margin: 15px auto; 
-    color: white;
+    margin: 15px auto;
+    color: #1a1a1a;
     text-align: center;
     border-radius: 10px;
     font-size: 25px;
@@ -44,7 +51,7 @@ export const Button = styled.a`
     } ;
     @media (max-width: 480px) {
         width: 80%;
-        
+
     } ;
 `
 export const Image = styled.img`
@@ -52,7 +59,12 @@ export const Image = styled.img`
     height: 50%;
     margin: 0px auto;
 `
-export const Text = styled.p`
+interface TextProps {
+    color?: string;
+    size?: string;
+    decoration?: string;
+}
+export const Text = styled.p<TextProps>`
     color: ${(props) => props.color|| "white"};
     text-align: center;
     font-size: ${(props) => props.size|| "15px"};
@@ -61,10 +73,10 @@ export const Text = styled.p`
     text-decoration: ${(props) => props.decoration|| "underline"};
     @media (max-width: 850px) {
         width: 50%;
-        
+
     } ;
     line-height: 1.5;
-    
+
 `
 export const Grid = styled.div`
     display: grid;

@@ -67,18 +67,19 @@ export const Hours = styled(FlexColumn)`
 export const Days = styled(FlexColumn)`
     width: 35%;
 `
-export const HoursText = styled.h4`
+export const HoursText = styled.p`
     color: white;
     margin: 2px;
     text-align: right;
     margin-top: 5px;
-    
+    font-size: 1em;
 `
-export const DaysText = styled.h4`
+export const DaysText = styled.p`
     color: white;
     margin: 2px;
     text-align: left;
     margin-top: 5px;
+    font-size: 1em;
 `
 export const FooterItems = styled(FlexRow)`
     
@@ -87,14 +88,16 @@ export const FooterItems = styled(FlexRow)`
     } ;
 
 `
-export const CopyRight = styled.h3`
+export const CopyRight = styled.p`
     color: white;
     padding-top: 10px;
+    font-size: 1.17em;
+    font-weight: bold;
 `
 export const CallButton = styled.a`
     width: 80%;
-    margin: 5px auto; 
-    color: white;
+    margin: 5px auto;
+    color: #1a1a1a;
     text-align: center;
     border-radius: 10px;
     font-size: 25px;

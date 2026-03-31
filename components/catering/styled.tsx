@@ -20,15 +20,16 @@ export const BannerImage = styled.img`
         width: 70%
     } ;
 `
-export const CateringText = styled.h4`
+export const CateringText = styled.p`
     color: white;
     width: 100%;
     text-align: center;
+    font-size: 1em;
 `
 export const CallButton = styled.a`
     width: 50%;
-    margin: 25px auto; 
-    color: white;
+    margin: 25px auto;
+    color: #1a1a1a;
     text-align: center;
     border-radius: 10px;
     font-size: 25px;
