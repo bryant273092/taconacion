@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import HOC from '../components/hoc';
 import Banner from '../components/banner';
 import LandingSection from '../components/landing';
 import { PageSeo } from '../components/seo/PageSeo';
@@ -22,4 +21,4 @@ const HomeContent = () => {
   )
 }
 
-export default HOC(HomeContent)
+export default HomeContent

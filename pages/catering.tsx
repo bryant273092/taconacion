@@ -1,5 +1,4 @@
 import PageHeading from '../components/pageHeading';
-import HOC from '../components/hoc';
 import CateringPage from '../components/catering';
 import { PageSeo } from '../components/seo/PageSeo';
 import { JsonLd, breadcrumbSchema } from '../components/seo/JsonLd';
@@ -19,4 +18,4 @@ const CateringContent = () => {
     )
 }
 
-export default HOC(CateringContent)
+export default CateringContent

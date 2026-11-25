@@ -15,6 +15,7 @@ export const PageSeo = ({ title, description, path }: PageSeoProps) => (
       title,
       description,
       canonical: absoluteUrl(path),
+      robotsProps: { maxImagePreview: 'large' },
       openGraph: {
         url: absoluteUrl(path),
         title,

@@ -1,5 +1,4 @@
 import PageHeading from '../components/pageHeading';
-import HOC from '../components/hoc';
 import MenuList from '../components/menuList';
 import { PageSeo } from '../components/seo/PageSeo';
 import { JsonLd, menuSchema, breadcrumbSchema } from '../components/seo/JsonLd';
@@ -22,4 +21,4 @@ const MenuContent = () => {
     )
 }
 
-export default HOC(MenuContent)
+export default MenuContent

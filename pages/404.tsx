@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { generateNextSeo } from 'next-seo/pages';
-import HOC from '../components/hoc';
 import PageHeading from '../components/pageHeading';
 import { Button, ButtonRow, Container, Lead } from '../components/layout';
 
@@ -20,4 +19,4 @@ const NotFound = () => (
   </>
 );
 
-export default HOC(NotFound);
+export default NotFound

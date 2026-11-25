@@ -1,5 +1,4 @@
 import PageHeading from '../components/pageHeading';
-import HOC from '../components/hoc';
 import { Button, ButtonRow, Container, HeaderTwo, Lead } from '../components/layout';
 import { PageSeo } from '../components/seo/PageSeo';
 import { JsonLd, breadcrumbSchema } from '../components/seo/JsonLd';
@@ -31,4 +30,4 @@ const OrderContent = () => {
   )
 }
 
-export default HOC(OrderContent)
+export default OrderContent

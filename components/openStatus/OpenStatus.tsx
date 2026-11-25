@@ -1,7 +1,12 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Link from 'next/link';
 import { useOpenStatus } from '../../lib/useOpenStatus';
 import { colors, breakpoints } from '../../styles/theme';
+
+const fadeIn = keyframes`
+    from { opacity: 0; }
+    to { opacity: 1; }
+`;
 
 const Badge = styled(Link)<{ $open: boolean }>`
     display: inline-flex;
@@ -14,6 +19,7 @@ const Badge = styled(Link)<{ $open: boolean }>`
     color: ${colors.text};
     font-size: 0.85rem;
     white-space: nowrap;
+    animation: ${fadeIn} 0.3s ease-out;
     &::before {
         content: '';
         flex-shrink: 0;

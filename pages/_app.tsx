@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import { useEffect } from 'react'
 import { Analytics } from '@vercel/analytics/next'
 import { track } from '@vercel/analytics'
+import SiteLayout from '../components/siteLayout/SiteLayout'
 import '../styles/globals.css'
 
 // Oswald (SIL Open Font License) — condensed display face matching the logo lettering.
@@ -31,7 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   useClickTracking()
   return (
     <div className={heading.variable}>
-      <Component {...pageProps} />
+      <SiteLayout>
+        <Component {...pageProps} />
+      </SiteLayout>
       <Analytics />
     </div>
   )

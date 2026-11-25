@@ -1,4 +1,3 @@
-import HOC from '../components/hoc';
 import PageHeading from '../components/pageHeading';
 import Map from '../components/map';
 import { PageSeo } from '../components/seo/PageSeo';
@@ -19,4 +18,4 @@ const LocationContent = () => {
     )
 }
 
-export default HOC(LocationContent)
+export default LocationContent
