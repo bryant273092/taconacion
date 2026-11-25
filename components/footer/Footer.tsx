@@ -68,10 +68,7 @@ export const Footer = () => {
         </FooterItem>
       </FooterItems>
       <CopyRight>
-        © {new Date().getFullYear()} {site.name} · Site by{" "}
-        <a href="https://bryanth.dev" target="_blank" rel="noopener">
-          Commercify
-        </a>
+        © {new Date().getFullYear()} {site.name} · Site by Commercify
       </CopyRight>
     </FooterContainer>
   );

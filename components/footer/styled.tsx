@@ -70,9 +70,4 @@ export const CopyRight = styled.p`
     color: ${colors.textMuted};
     font-size: 0.9rem;
     text-align: center;
-    a {
-        color: ${colors.text};
-        text-decoration: underline;
-        text-underline-offset: 3px;
-    }
 `;
