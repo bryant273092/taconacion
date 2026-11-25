@@ -3,9 +3,10 @@ import type { MenuCategory } from '../../types/menu';
 import { Container } from '../layout';
 import {
     MeatSection, MeatHeading, MeatOptions, MeatText, AltLang,
-    CategoryNav, CategoryLink, Category, CategoryHeading, OptionDescription,
+    Category, CategoryHeading, OptionDescription,
     ItemList, ItemRow, ItemHeading, ItemDescription, ItemPrice,
 } from './styled';
+import { CategoryNav } from './CategoryNav';
 
 const menu = menuItems as MenuCategory[];
 
@@ -20,14 +21,12 @@ const meats = [
 
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
+const categories = menu.map((c) => ({ id: slug(c.category), label: c.category }));
+
 export const MenuList = () => {
     return (
         <Container>
-            <CategoryNav aria-label="Menu categories">
-                {menu.map((c) => (
-                    <CategoryLink key={c.category} href={`#${slug(c.category)}`}>{c.category}</CategoryLink>
-                ))}
-            </CategoryNav>
+            <CategoryNav categories={categories} />
 
             <MeatSection aria-labelledby="meat-options">
                 <MeatHeading id="meat-options">Meat Options</MeatHeading>

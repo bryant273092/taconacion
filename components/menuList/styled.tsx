@@ -1,41 +1,6 @@
 import styled from 'styled-components';
 import { colors, fonts, breakpoints } from '../../styles/theme';
 
-export const CategoryNav = styled.nav`
-    position: sticky;
-    top: 72px;
-    z-index: 10;
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    margin: -8px -8px 24px;
-    padding: 12px 8px;
-    background: ${colors.surfaceStrong};
-    border-radius: 12px;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    @media (max-width: ${breakpoints.lg}) {
-        top: 64px;
-    }
-`;
-export const CategoryLink = styled.a`
-    flex-shrink: 0;
-    padding: 6px 14px;
-    border: 1px solid ${colors.brand};
-    border-radius: 999px;
-    color: ${colors.brand};
-    font-family: ${fonts.heading};
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    &:hover {
-        background: ${colors.brand};
-        color: ${colors.ink};
-    }
-`;
 export const MeatSection = styled.section`
     width: 100%;
     max-width: 900px;
