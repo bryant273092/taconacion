@@ -25,10 +25,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          {/* Preload the body background image — it's a CSS background so the browser scanner won't find it */}
-          <link rel="preload" as="image" href="/background.webp" fetchPriority="high" />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

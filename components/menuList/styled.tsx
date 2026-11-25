@@ -1,92 +1,125 @@
 import styled from 'styled-components';
-import { FlexRow, FlexColumn } from '../layout';
+import { colors, fonts, breakpoints } from '../../styles/theme';
 
-export const MenuContainer = styled(FlexColumn)`
-    width: 90%;
-    margin: 0px auto;
-    background-color: rgba(0,0, 0, 0.6);
-    border-radius: 30px 0px;
-    padding: 10px;
-`
-export const MenuNavContainer = styled(FlexRow)`
-    width: 80%;
-    margin: 0px auto;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #ee971c;
-`
-export const MenuButton = styled.a`
-    color: black;
-    text-align: center;
-    margin: auto;
-    border-bottom: 2px solid black;
-    font-size: 20px;
-`
-export const ItemListContainer = styled(FlexColumn)`
-    width: 80%;
-    margin: 0px auto;
-`
-export const CategoryHeading = styled.h2`
-    color: white;
-    text-align: center;
-
-`
-export const ItemRow = styled(FlexRow)`
-    justify-content: space-between;
-`
-
-export const TextContainer = styled(FlexColumn)`
-    text-align: left;
-`
-export const ItemHeading = styled.h3`
-    color: #ee971c;
-`
-export const ItemDescription = styled.p`
-    font-size: 15px;
-    color: white;
-    margin: 0;
-`
-export const ItemPrice = styled.p`
-    color: #ee971c;
-    font-size: 1.17em;
-    font-weight: bold;
-    text-align: right;
-    margin: 0;
-`
-export const MeatSection = styled(FlexColumn)`
+export const CategoryNav = styled.nav`
+    position: sticky;
+    top: 72px;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin: -8px -8px 24px;
+    padding: 12px 8px;
+    background: ${colors.surfaceStrong};
+    border-radius: 12px;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (max-width: ${breakpoints.lg}) {
+        top: 64px;
+    }
+`;
+export const CategoryLink = styled.a`
+    flex-shrink: 0;
+    padding: 6px 14px;
+    border: 1px solid ${colors.brand};
+    border-radius: 999px;
+    color: ${colors.brand};
+    font-family: ${fonts.heading};
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    &:hover {
+        background: ${colors.brand};
+        color: ${colors.ink};
+    }
+`;
+export const MeatSection = styled.section`
     width: 100%;
-    background-color: #ee971c;
-    height: auto;
-    margin: 0px auto;
-    border-radius: 5px;
-`
+    max-width: 900px;
+    margin: 0 auto 16px;
+    padding: 8px 16px 16px;
+    background-color: ${colors.brand};
+    border-radius: 16px;
+`;
 export const MeatHeading = styled.h2`
-    color: black;
+    color: ${colors.ink};
     text-align: center;
-    margin-bottom: 0px;
-`
-export const MeatOptions = styled.div`
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 8px 0;
+`;
+export const MeatOptions = styled.ul`
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    margin: 0px auto;
-    padding: 0px 5px;
-`
-export const MeatText = styled.p`
-    color: white;
-    text-align:  center;
-    padding: 0px 5px;
-    font-weight: bold;
-`
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+`;
+export const MeatText = styled.li`
+    color: ${colors.ink};
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+`;
 export const AltLang = styled.span`
-    color: black;
-    font-size: 12px;
     display: block;
-`
+    color: rgba(26, 26, 26, 0.75);
+    font-size: 0.8rem;
+    font-weight: 500;
+`;
+export const Category = styled.section`
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    scroll-margin-top: 150px;
+`;
+export const CategoryHeading = styled.h2`
+    color: ${colors.text};
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    margin: 40px 0 4px;
+`;
 export const OptionDescription = styled.p`
-    color: #ee971c;
+    color: ${colors.brand};
     text-align: center;
     font-style: italic;
-    margin-top: 0px;
-
-`
+    margin: 0 0 8px;
+`;
+export const ItemList = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+`;
+export const ItemRow = styled.li`
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed ${colors.divider};
+`;
+export const ItemHeading = styled.h3`
+    color: ${colors.brand};
+    font-size: 1.3rem;
+    margin: 0 0 2px;
+`;
+export const ItemDescription = styled.p`
+    color: ${colors.textMuted};
+    font-size: 0.95rem;
+    margin: 0;
+`;
+export const ItemPrice = styled.p`
+    flex-shrink: 0;
+    color: ${colors.brand};
+    font-family: ${fonts.heading};
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+`;

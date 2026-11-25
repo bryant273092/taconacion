@@ -1,60 +1,59 @@
-import {
-    NavBarContainer,
-    NavBarLogo,
-    NavBarItems,
-    NavBarButton,
-    HamburgerIconDiv,
-    NavBarItem,
-    DropDownItem,
-    MobileListContainer,
-} from './styled';
-import HamburgerIcon from './hamburgerIcon';
-import links from '../../data/nav_links.json'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import links from '../../data/nav_links.json';
+import HamburgerIcon from './hamburgerIcon';
+import { NavBarContainer, LogoLink, NavBarItems, NavLink, MenuToggle, MobileList, MobileLink, OrderCta } from './styled';
+
 export const NavBar = () => {
-    //hook to control opening/closing dropdown menu when user clicks on hamburger icon
-    const [display, setDisplay] = useState('none');
-    const teamLogo = "";
-    //alternates display property for mobile drop down menu
-    const changeDisplay = () => {
-        if (display == 'none') {
-            setDisplay('flex');
-        } else {
-            setDisplay('none');
-        }
-    };
+    const [open, setOpen] = useState(false);
+    const { pathname, events } = useRouter();
+
+    // Close the mobile menu after navigating.
+    useEffect(() => {
+        const close = () => setOpen(false);
+        events.on('routeChangeStart', close);
+        return () => events.off('routeChangeStart', close);
+    }, [events]);
+
     return (
-        <NavBarContainer>
-            {/* toggles mobile dropdown list when user clicks on hamburger icon */}
-            <HamburgerIconDiv onClick={changeDisplay}>
-                <HamburgerIcon />
-            </HamburgerIconDiv>
-            <MobileListContainer $display={display}>
-                {links.map((link) => (
-                    <Link key={link.name} title={"Go To " + link.name} href={link.href}>
-                        <DropDownItem>
-                            {link.name}
-                        </DropDownItem>
-                    </Link>
-                ))}
-            </MobileListContainer>
-            <NavBarLogo>
-                <Image width={50} height={48} alt="An image of the Taco Nacion Logo" src={"/taco_nacion_logo.webp"} priority />
-            </NavBarLogo>
+        <NavBarContainer aria-label="Main navigation">
+            <LogoLink href="/" aria-label="Taco Nacion home">
+                <Image width={50} height={48} alt="Taco Nacion logo" src="/taco_nacion_logo.webp" priority />
+            </LogoLink>
+
             <NavBarItems>
                 {links.map((link) => (
-                    <NavBarItem key={link.name}>
-                        <Link title={"Go To " + link.name} key={link.name} href={link.href}>
-                            <NavBarButton >
-                                {link.name}
-                            </NavBarButton>
-                        </Link>
-
-                    </NavBarItem>
+                    <li key={link.href}>
+                        <NavLink href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>
+                            {link.name}
+                        </NavLink>
+                    </li>
                 ))}
             </NavBarItems>
+
+            <OrderCta href="/order">Order Now</OrderCta>
+
+            <MenuToggle
+                type="button"
+                aria-label={open ? 'Close menu' : 'Open menu'}
+                aria-expanded={open}
+                aria-controls="mobile-menu"
+                onClick={() => setOpen((o) => !o)}
+            >
+                <HamburgerIcon />
+            </MenuToggle>
+
+            <MobileList id="mobile-menu" $open={open}>
+                {links.map((link) => (
+                    <li key={link.href}>
+                        <MobileLink href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>
+                            {link.name}
+                        </MobileLink>
+                    </li>
+                ))}
+            </MobileList>
         </NavBarContainer>
     );
 };

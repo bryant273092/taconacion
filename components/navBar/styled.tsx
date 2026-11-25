@@ -1,83 +1,108 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+import { colors, fonts, buttonStyles, breakpoints } from '../../styles/theme';
 
-import { FlexColumn, FlexRow } from '../../components/layout'
-
-export const NavBarContainer = styled(FlexRow)`
-    width: 100%;
-    height: 50px;
-    padding: 25px 25px;
-    align-items: center;
-    background-color: black;
+export const NavBarContainer = styled.nav`
     position: sticky;
     top: 0;
-    justify-content: space-between;
-`;
-export const NavBarLogo = styled(FlexRow)`
-    overflow: hidden;
-    margin-left: 20px;
-`;
-export const NavBarItems = styled(FlexRow)`
-    width: 65%;
-    justify-content: space-between;
-    align-self: center;
-    @media (max-width: 1024px) {
-        display: none;
-    } ;
-`;
-export const NavBarItem = styled(FlexRow)`
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 24px;
     width: 100%;
-    flex-direction: column;
+    height: 72px;
+    padding: 0 32px;
+    background-color: ${colors.surfaceStrong};
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid ${colors.divider};
+    @media (max-width: ${breakpoints.lg}) {
+        padding: 0 16px;
+        height: 64px;
+    }
 `;
-export const NavBarButton = styled.span`
-    color: white;
-    font-size: 17px;
-    text-align: center;
-    text-decoration: none;
-    margin: auto;
-    border-bottom: 2px solid transparent;
-    ${NavBarItem}:hover & {
-        border-bottom: 2px solid #ee971c;
-    } ;
+export const LogoLink = styled(Link)`
+    display: flex;
+    flex-shrink: 0;
 `;
-
-export const HamburgerIconDiv = styled(NavBarButton)`
-    margin: 0px;
-    align-self: center;
-    @media (min-width: 1025px) {
+export const NavBarItems = styled.ul`
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media (max-width: ${breakpoints.lg}) {
         display: none;
-    } ;
+    }
 `;
-export const DropDownItems = styled(FlexColumn)`
+export const NavLink = styled(Link)`
+    display: block;
+    padding: 8px 14px;
+    color: ${colors.text};
+    font-family: ${fonts.heading};
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    &:hover,
+    &[aria-current='page'] {
+        color: ${colors.brand};
+        border-bottom-color: ${colors.brand};
+    }
+`;
+export const OrderCta = styled(Link)`
+    ${buttonStyles}
+    min-height: 40px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    box-shadow: none;
+    @media (max-width: ${breakpoints.lg}) {
+        margin-left: auto;
+    }
+    @media (max-width: ${breakpoints.sm}) {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+`;
+export const MenuToggle = styled.button`
     display: none;
-    background-color: background;
-    position: absolute;
-    width: 65%;
-    top: 50px;
-    left: 150px;
-    ${NavBarItem}:hover & {
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    @media (max-width: ${breakpoints.lg}) {
         display: flex;
     }
 `;
-export const DropDownItem = styled(NavBarButton)`
-    color: white;
-    padding: 10px;
-    border-bottom: 1px solid #f57b48 !important;
-    margin: auto 0px;
+export const MobileList = styled.ul<{ $open: boolean }>`
+    display: none;
+    @media (max-width: ${breakpoints.lg}) {
+        display: ${(p) => (p.$open ? 'flex' : 'none')};
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 8px 0;
+        list-style: none;
+        background-color: ${colors.surfaceStrong};
+        border-bottom: 2px solid ${colors.brand};
+    }
 `;
-interface MobileListContainerProps {
-    $display?: string;
-}
-export const MobileListContainer = styled(FlexColumn)<MobileListContainerProps>`
-    background-color: black;
-    flex-direction: column;
-    position: absolute;
-    border-top: 1px solid #f57b48;
-    top: 50px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    display: ${(props) => props.$display || 'none'};
-    @media (min-width: 1025px) {
-        display: none;
-    } ;
+export const MobileLink = styled(Link)`
+    display: block;
+    padding: 14px 24px;
+    color: ${colors.text};
+    font-family: ${fonts.heading};
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-left: 4px solid transparent;
+    &[aria-current='page'] {
+        color: ${colors.brand};
+        border-left-color: ${colors.brand};
+    }
 `;

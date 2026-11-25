@@ -1,46 +1,62 @@
-import {MenuContainer, MenuNavContainer, MenuButton, ItemListContainer, ItemRow, CategoryHeading, ItemDescription, ItemHeading, ItemPrice, TextContainer, MeatSection, MeatHeading, MeatText, MeatOptions, AltLang, OptionDescription} from './styled';
-import menuItems from '../../data/menu.json'
+import menuItems from '../../data/menu.json';
+import type { MenuCategory } from '../../types/menu';
+import { Container } from '../layout';
+import {
+    MeatSection, MeatHeading, MeatOptions, MeatText, AltLang,
+    CategoryNav, CategoryLink, Category, CategoryHeading, OptionDescription,
+    ItemList, ItemRow, ItemHeading, ItemDescription, ItemPrice,
+} from './styled';
+
+const menu = menuItems as MenuCategory[];
+
+const meats = [
+    ['Carne Asada', 'Grilled Steak'],
+    ['Pollo Asado', 'Grilled Chicken'],
+    ['Chorizo', 'Mexican Sausage'],
+    ['Birria', 'Marinated Beef'],
+    ['Al Pastor', 'Marinated Pork'],
+    ['Carnitas', 'Braised Pork'],
+];
+
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 export const MenuList = () => {
     return (
-        <MenuContainer>
-            {/* <MenuNavContainer>
-                {menuItems.map((category) => (
-                    <MenuButton key={category.category}>{category.category}</MenuButton>
+        <Container>
+            <CategoryNav aria-label="Menu categories">
+                {menu.map((c) => (
+                    <CategoryLink key={c.category} href={`#${slug(c.category)}`}>{c.category}</CategoryLink>
                 ))}
-            </MenuNavContainer> */}
-            <ItemListContainer>
-                <MeatSection>
-                    <MeatHeading>Meat Options</MeatHeading>
-                    <MeatOptions>
-                        <MeatText>Carne Asada <AltLang>(Grilled Steak) </AltLang> </MeatText>
-                        <MeatText>Pollo Asado <AltLang>(Grilled Chicken) </AltLang> </MeatText>
-                        <MeatText>Chorizo <AltLang>(Mexican Sauasage) </AltLang> </MeatText>
-                        <MeatText>Birria <AltLang>(Marinated Beef) </AltLang> </MeatText>
-                        <MeatText>Al Pastor <AltLang>(Marinated Pork) </AltLang> </MeatText>
-                        <MeatText>Carnitas <AltLang>(Braised Pork) </AltLang> </MeatText>
-                    </MeatOptions>
-                </MeatSection>
-                {menuItems.map((category) => (
-                    <div key={category.category}>
-                        <CategoryHeading key={category.category}>{category.category}</CategoryHeading>
-                        <OptionDescription key={category.category}>{category.description}</OptionDescription>
-                        <div key={category.category}>
-                            {category.items.map((item) => (
-                                <ItemRow key={item.name}>
-                                    <TextContainer key={item.name}>
-                                        <ItemHeading key={item.name}>{item.name}</ItemHeading>
-                                        <ItemDescription key={item.description}>{item.description}</ItemDescription>
-                                    </TextContainer>
-                                    <ItemPrice key={item.description}>{item.price}</ItemPrice>
-                                </ItemRow>
-                            ))}
-                        </div>
-                    </div>
-                ))}
+            </CategoryNav>
 
-            </ItemListContainer>
-            
-        </MenuContainer>
+            <MeatSection aria-labelledby="meat-options">
+                <MeatHeading id="meat-options">Meat Options</MeatHeading>
+                <MeatOptions>
+                    {meats.map(([es, en]) => (
+                        <MeatText key={es}>
+                            {es} <AltLang>({en})</AltLang>
+                        </MeatText>
+                    ))}
+                </MeatOptions>
+            </MeatSection>
+
+            {menu.map((category) => (
+                <Category key={category.category} id={slug(category.category)}>
+                    <CategoryHeading>{category.category}</CategoryHeading>
+                    {category.description && <OptionDescription>{category.description}</OptionDescription>}
+                    <ItemList>
+                        {category.items.map((item) => (
+                            <ItemRow key={item.name}>
+                                <div>
+                                    <ItemHeading>{item.name}</ItemHeading>
+                                    {item.description && <ItemDescription>{item.description}</ItemDescription>}
+                                </div>
+                                <ItemPrice>{item.price}</ItemPrice>
+                            </ItemRow>
+                        ))}
+                    </ItemList>
+                </Category>
+            ))}
+        </Container>
     )
 }

@@ -6,9 +6,9 @@ interface PageHeadingProps {
 export const PageHeading = ({ title }: PageHeadingProps) => {
     return (
         <HeadingContainer>
-            <Line />
-                <Heading>{title}</Heading>
-            <Line />
+            <Line aria-hidden="true" />
+            <Heading>{title}</Heading>
+            <Line aria-hidden="true" />
         </HeadingContainer>
     )
 }

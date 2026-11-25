@@ -1,1 +1,1 @@
-export { FlexColumn, FlexRow, Container,HeaderOne, HeaderTwo, HeaderThree, Button, Image, Text, Grid, Content, CenteredDiv} from './styled'
+export { FlexColumn, FlexRow, Container, HeaderTwo, HeaderThree, Lead, Button, ButtonRow, Content } from './styled'

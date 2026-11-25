@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, buttonStyles, breakpoints, maxWidth } from '../../styles/theme';
 
 export const FlexColumn = styled.div`
     display: flex;
@@ -7,93 +8,63 @@ export const FlexColumn = styled.div`
 export const FlexRow = styled.div`
     display: flex;
     flex-direction: row;
-`
-interface ColorProps {
-    color?: string;
-}
-export const Container = styled(FlexColumn)<ColorProps>`
+`;
+
+// Dark translucent card used as the main content surface on every page.
+export const Container = styled(FlexColumn)<{ $transparent?: boolean }>`
     width: 90%;
+    max-width: ${maxWidth};
     margin: 0 auto;
-    background-color: ${(props) => props.color|| "rgba(0,0,0, 0.6)"};
-    border-radius: 25px;
-`
-export const HeaderOne = styled.h1<ColorProps>`
-    color: ${(props) => props.color|| "white"};
-    width: 100%;
-    text-align: center;
-`
+    padding: ${(p) => (p.$transparent ? '0' : '24px 32px 40px')};
+    background-color: ${(p) => (p.$transparent ? 'transparent' : colors.surface)};
+    border-radius: 24px;
+    backdrop-filter: ${(p) => (p.$transparent ? 'none' : 'blur(2px)')};
+    @media (max-width: ${breakpoints.md}) {
+        width: calc(100% - 24px);
+        padding: ${(p) => (p.$transparent ? '0' : '16px 16px 32px')};
+    }
+`;
 export const HeaderTwo = styled.h2`
-    color: white;
+    color: ${colors.text};
     width: 100%;
     text-align: center;
-`
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 16px 0 8px;
+`;
 export const HeaderThree = styled.h3`
-    color: #ee971c;
+    color: ${colors.brand};
     width: 100%;
     text-align: center;
-`
-interface ButtonProps {
-    color?: string;
-    padding?: string;
-}
-export const Button = styled.a<ButtonProps>`
-    width: 50%;
-    margin: 15px auto;
-    color: #1a1a1a;
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    margin: 8px 0;
+`;
+export const Lead = styled.p`
+    color: ${colors.text};
+    max-width: 640px;
+    margin: 8px auto 16px;
     text-align: center;
-    border-radius: 10px;
-    font-size: 25px;
-    background-color: ${(props) => props.color || 'rgba(238, 151, 28, 1)' };
-    padding: ${(props) => props.padding|| "10px 0px"};
-    @media (max-width: 850px) {
-        font-size: 1em;
-        width: 45%;
-    } ;
-    @media (max-width: 480px) {
-        width: 80%;
-
-    } ;
-`
-export const Image = styled.img`
-    width: 50%;
-    height: 50%;
-    margin: 0px auto;
-`
-interface TextProps {
-    color?: string;
-    size?: string;
-    decoration?: string;
-}
-export const Text = styled.p<TextProps>`
-    color: ${(props) => props.color|| "white"};
-    text-align: center;
-    font-size: ${(props) => props.size|| "15px"};
-    width: 80%;
-    margin: 0px auto;
-    text-decoration: ${(props) => props.decoration|| "underline"};
-    @media (max-width: 850px) {
-        width: 50%;
-
-    } ;
-    line-height: 1.5;
-
-`
-export const Grid = styled.div`
-    display: grid;
+    font-size: 1.15rem;
+    line-height: 1.6;
+`;
+export const Button = styled.a`
+    ${buttonStyles}
+    width: min(100%, 360px);
+    margin: 12px auto;
+`;
+export const ButtonRow = styled(FlexRow)`
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 16px auto;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    margin: 0px auto;
-    padding: 0px 5px;
-    grid-column-gap: 7px;
-`
+    & > * {
+        margin: 0;
+        flex: 0 1 260px;
+    }
+`;
 export const Content = styled(FlexColumn)`
     height: 100%;
-    margin: auto 0px;
+    padding: 48px 16px;
     justify-content: center;
-`
-export const CenteredDiv = styled(FlexColumn)`
     align-items: center;
-    justify-content: space-between;
-    margin: 0px auto;
-    width: 100%;
-`
+`;

@@ -1,82 +1,54 @@
 import styled from 'styled-components';
-import {FlexColumn, FlexRow} from '../layout';
+import Link from 'next/link';
+import { FlexColumn, FlexRow } from '../layout';
+import { colors, buttonStyles, breakpoints } from '../../styles/theme';
 
-export const BannerContainer = styled(FlexColumn)`
+export const BannerContainer = styled.section`
     width: 100%;
-    height: auto;
     background-image: url(/grill.webp);
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom left;
-    @media (max-width: 1024px) {
+    @media (max-width: ${breakpoints.lg}) {
         background-position: center center;
         background-attachment: scroll;
-    } ;
-`
-interface BannerHeaderProps {
-    $topMargin?: string;
-}
-export const BannerHeader = styled.h1<BannerHeaderProps>`
-    width: auto;
-    color: white;
-    margin-top: ${(props) => props.$topMargin|| "7.5%"};
-    text-align: center;
-    border-radius: 20px;
-    font-size: 3.2em;
-    @media (max-width: 640px) {
-        font-size: 2em;
-        
-    } ;
-`
-export const BannerText = styled(BannerHeader)`
-    font-size: 2em;
-    margin-top: 0px;
-    color: white;
-    text-shadow: 1px 1px black;
-    @media (max-width: 640px) {
-        font-size: 1.2em;
-        padding: 0px 5px;
-    } ;
-    
-`
-export const BannerButtonGrid = styled(FlexRow)`
-    width: 55%;
-    margin: 25px auto;
-    justify-content:center;
+    }
+`;
+// Darkening layer over a background photo so text stays legible.
+export const Overlay = styled(FlexColumn)`
+    width: 100%;
+    min-height: inherit;
     align-items: center;
-    @media (max-width: 640px) {
-        flex-direction: row;
-        width: 60%
-    } ;
-`
-export const BannerButton = styled.span`
-    width: 100%;
-    margin: 10px 5px;
-    color: #1a1a1a;
+    padding: 64px 16px 72px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.75) 100%);
+`;
+export const Heading = styled.h1`
+    color: ${colors.text};
     text-align: center;
-    border-radius: 10px;
-    font-size: 25px;
-    background-color: rgba(238, 151, 28, 0.7);
-    padding: 15px 10px;
-    @media (max-width: 500px) {
-        font-size: 1em;
-    } ;
-`
-export const ImageFilter = styled.div`
-    width: 100%;
-    height: inherit;
-    background-color: rgba(0, 0, 0, 0.65);
-`
-export const ImageContainer = styled(FlexColumn)`
-    width: 100%;
-    margin: 0px auto;
-`
-export const Image = styled.img`
-    width: 50%;
-    height: 50%;
-    margin: 10% auto 0 auto;
-    @media (min-width: 640px) {
-        width: 324px;
-        height: 307px;
-    } ;
-`
+    font-size: clamp(1.75rem, 4.5vw, 3rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 28px 0 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+`;
+export const Tagline = styled.p`
+    color: ${colors.textMuted};
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 640px;
+    margin: 0 0 16px;
+`;
+export const BannerButtonGrid = styled(FlexRow)`
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+`;
+export const BannerButton = styled(Link)`
+    ${buttonStyles}
+    min-width: 220px;
+    @media (max-width: ${breakpoints.sm}) {
+        min-width: 0;
+        flex: 1 1 140px;
+    }
+`;

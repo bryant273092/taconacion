@@ -1,114 +1,78 @@
 import styled from 'styled-components';
-import { FlexColumn, FlexRow } from '../layout'
+import { FlexColumn } from '../layout';
+import { colors, breakpoints, maxWidth } from '../../styles/theme';
 
-export const FooterContainer = styled(FlexColumn)`
+export const FooterContainer = styled.footer`
     width: 90%;
-    margin: 200px auto 10px auto;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    
-    
-`
+    max-width: ${maxWidth};
+    margin: 96px auto 16px;
+    padding: 24px 32px 16px;
+    background-color: ${colors.surfaceStrong};
+    border-top: 3px solid ${colors.brand};
+    border-radius: 24px;
+    @media (max-width: ${breakpoints.md}) {
+        width: calc(100% - 24px);
+        margin-top: 64px;
+        padding: 16px;
+    }
+`;
+export const FooterItems = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    @media (max-width: ${breakpoints.md}) {
+        grid-template-columns: 1fr;
+    }
+`;
 export const FooterItem = styled(FlexColumn)`
-    width: 100%;
-    margin-bottom: 10px;
+    align-items: center;
     text-align: center;
-`
+`;
 export const FooterHeader = styled.h2`
-    color: #ee971c;
-`
-export const FooterButton = styled.a`
-    color: white;
-    
-`
-export const IconContainer = styled(FlexRow)`
-    width: 60%;
-    margin: 0px auto;
-    justify-content: space-between;
-    @media (max-width: 850px) {
-        width: 45%
-    } ;
-    @media (max-width: 480px) {
-        width: 80%;
-        
-    } ;
-`
-export const FooterIcon = styled(FooterButton)`
-    font-size: 50px;
-    @media (min-width: 2000px) {
-        font-size: 70px;
-    } ;
-`
-export const FooterLogo = styled.img`
-
-`
-export const HoursContainer = styled(FlexRow)`
-width: 80%;
-    margin: 0px auto;
-    @media (max-width: 1000px) {
-        font-size: 13px;
-        
-    } ;
-    @media (max-width: 850px) {
-        width: 45%;
-        
-    } ;
-    @media (max-width: 480px) {
-        width: 80%;
-        
-    } ;
-    
-    
-`
-export const Hours = styled(FlexColumn)`
-    width: 65%;
-`
-export const Days = styled(FlexColumn)`
-    width: 35%;
-`
-export const HoursText = styled.p`
-    color: white;
-    margin: 2px;
-    text-align: right;
-    margin-top: 5px;
-    font-size: 1em;
-`
-export const DaysText = styled.p`
-    color: white;
-    margin: 2px;
-    text-align: left;
-    margin-top: 5px;
-    font-size: 1em;
-`
-export const FooterItems = styled(FlexRow)`
-    
-    @media (max-width: 850px) {
-        flex-direction: column;
-    } ;
-
-`
+    color: ${colors.brand};
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 8px 0 12px;
+`;
+export const Address = styled.address`
+    color: ${colors.text};
+    font-style: normal;
+    line-height: 1.6;
+`;
+export const TextLink = styled.a`
+    color: ${colors.text};
+    font-size: 1.3rem;
+    font-weight: 600;
+    &:hover {
+        color: ${colors.brand};
+    }
+`;
+export const IconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 12px;
+`;
+export const FooterIcon = styled.a`
+    color: ${colors.text};
+    font-size: 2.25rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    &:hover {
+        color: ${colors.brand};
+        transform: translateY(-2px);
+    }
+`;
 export const CopyRight = styled.p`
-    color: white;
-    padding-top: 10px;
-    font-size: 1.17em;
-    font-weight: bold;
-`
-export const CallButton = styled.a`
-    width: 80%;
-    margin: 5px auto;
-    color: #1a1a1a;
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid ${colors.divider};
+    color: ${colors.textMuted};
+    font-size: 0.9rem;
     text-align: center;
-    border-radius: 10px;
-    font-size: 25px;
-    background-color: rgba(238, 151, 28, 0.7);
-    padding: 10px 0px;
-    @media (max-width: 850px) {
-        font-size: 1em;
-        width: 45%;
-    } ;
-    @media (max-width: 480px) {
-        width: 80%;
-        
-    } ;
-`
+    a {
+        color: ${colors.text};
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+`;
