@@ -1,7 +1,7 @@
 // Single source of truth for business info (NAP, hours, links).
 // Used by structured data, footer, and location page so they never drift apart.
 
-export const SITE_URL = 'https://taco-nacion.com';
+export const SITE_URL = 'https://www.taco-nacion.com';
 
 export const site = {
   name: 'Taco Nacion',
