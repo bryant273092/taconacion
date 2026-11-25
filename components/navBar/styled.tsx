@@ -6,7 +6,10 @@ export const NavBarContainer = styled.nav`
     position: sticky;
     top: 0;
     z-index: 50;
-    display: flex;
+    /* Equal-width side columns keep the links centered on the page,
+       regardless of how wide the brand/badge or the CTA is. */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 24px;
     width: 100%;
@@ -21,18 +24,26 @@ export const NavBarContainer = styled.nav`
     }
 `;
 export const Brand = styled.div`
+    grid-column: 1;
+    justify-self: start;
     display: flex;
     align-items: center;
     gap: 16px;
     flex-shrink: 0;
+    /* Keep the badge compact on narrower desktops so it never crowds the centered links. */
+    @media (max-width: 1280px) {
+        .detail {
+            display: none;
+        }
+    }
 `;
 export const LogoLink = styled(Link)`
     display: flex;
     flex-shrink: 0;
 `;
 export const NavBarItems = styled.ul`
+    grid-column: 2;
     display: flex;
-    flex: 1;
     justify-content: center;
     gap: 8px;
     margin: 0;
@@ -60,6 +71,8 @@ export const NavLink = styled(Link)`
 `;
 export const OrderCta = styled.a`
     ${buttonStyles}
+    grid-column: 3;
+    justify-self: end;
     min-height: 40px;
     padding: 8px 20px;
     font-size: 1rem;
@@ -77,7 +90,8 @@ export const MenuToggle = styled.button`
     cursor: pointer;
     @media (max-width: ${breakpoints.lg}) {
         display: flex;
-        margin-left: auto;
+        grid-column: 3;
+        justify-self: end;
     }
 `;
 export const MobileList = styled.ul<{ $open: boolean }>`
