@@ -28,7 +28,7 @@ export const restaurantSchema = {
   priceRange: site.priceRange,
   servesCuisine: site.cuisine,
   image: [absoluteUrl('/og-image.jpg'), absoluteUrl('/taco_nacion_physical.jpg')],
-  logo: absoluteUrl('/taco_nacion_logo.webp'),
+  logo: absoluteUrl('/taco-nacion-logo.webp'),
   hasMenu: absoluteUrl('/menu'),
   acceptsReservations: false,
   address: { '@type': 'PostalAddress', ...site.address },

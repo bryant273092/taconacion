@@ -20,7 +20,7 @@ export const NavBar = () => {
     return (
         <NavBarContainer aria-label="Main navigation">
             <LogoLink href="/" aria-label="Taco Nacion home">
-                <Image width={50} height={48} alt="Taco Nacion logo" src="/taco_nacion_logo.webp" priority />
+                <Image width={50} height={49} alt="Taco Nacion logo" src="/taco-nacion-logo.webp" priority />
             </LogoLink>
 
             <NavBarItems>

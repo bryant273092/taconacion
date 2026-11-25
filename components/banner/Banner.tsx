@@ -6,10 +6,10 @@ export const Banner = () => {
         <BannerContainer>
             <Overlay>
                 <NextImage
-                    src="/taco_nacion_logo.webp"
+                    src="/taco-nacion-logo.webp"
                     alt="Taco Nacion"
-                    width={324}
-                    height={307}
+                    width={989}
+                    height={973}
                     priority
                     sizes="(max-width: 640px) 55vw, 324px"
                     style={{ width: 'min(55vw, 324px)', height: 'auto' }}

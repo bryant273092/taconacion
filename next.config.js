@@ -11,6 +11,12 @@ const nextConfig = {
   // Relative to this file so it resolves both locally and on Vercel's build machines
   // (an absolute /Users/... path breaks remote builds).
   outputFileTracingRoot: __dirname,
+  // Keep the old logo URL working (indexed by search engines / linked externally).
+  async redirects() {
+    return [
+      { source: '/taco_nacion_logo.webp', destination: '/taco-nacion-logo.webp', permanent: true },
+    ]
+  },
 }
 
 module.exports = nextConfig
