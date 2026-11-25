@@ -24,7 +24,7 @@ export const site = {
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d211880.4777792414!2d-117.575223!3d33.9248577!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x80c3351b7666baad%3A0x7fc95fd75e8370cd!2sTaco%20Nacion%2C%201119%20S%20Milliken%20Ave%20STE%20G%2C%20Ontario%2C%20CA%2091761!3m2!1d34.0523891!2d-117.5576833!5e0!3m2!1sen!2sus!4v1605662579084!5m2!1sen!2sus',
   orderDeliveryUrl: 'https://www.grubhub.com/restaurant/taco-nacion-1119-s-milliken-ave-ontario/2567777',
-  orderTakeoutUrl: 'https://online.skytab.com/889a3304fe5c914d1b6b3eb906548eed',
+  orderTakeoutUrl: 'https://online.skytab.com/7ee7ac152181f6e1de3fc900a8dc3cce',
   social: {
     instagram: 'https://www.instagram.com/taco.nacion/',
     yelp: 'https://www.yelp.com/biz/taco-nacion-ontario',
