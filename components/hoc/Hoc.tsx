@@ -5,6 +5,7 @@ import { generateDefaultSeo } from 'next-seo/pages';
 import { defaultSeo } from '../../config/seo';
 import { JsonLd, restaurantSchema, websiteSchema } from '../seo/JsonLd';
 import { ComponentType } from 'react';
+import { MobileActionBar, ActionBarSpacer } from '../actionBar/MobileActionBar';
 
 export const HOC = <P extends object>(Content: ComponentType<P>) => {
     const WrappedComponent = (props: P) => {
@@ -19,6 +20,8 @@ export const HOC = <P extends object>(Content: ComponentType<P>) => {
                     <Content {...props} />
                 </main>
                 <Footer />
+                <ActionBarSpacer />
+                <MobileActionBar />
             </>
         );
     };

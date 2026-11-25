@@ -1,6 +1,7 @@
 import NextImage from "next/image";
 import { Container, HeaderTwo, HeaderThree, Button } from "../layout";
 import { HoursTable } from "../hours/Hours";
+import OpenStatus from "../openStatus/OpenStatus";
 import { site } from "../../config/site";
 import { Grid, Column, Photo, AddressLink, MapFrame } from "./styled";
 
@@ -13,7 +14,7 @@ export const Map = () => {
         <Photo>
           <NextImage
             alt="Storefront of Taco Nacion in Ontario, California"
-            src="/taco_nacion_physical.jpg"
+            src="/taco-nacion-ontario-storefront.jpg"
             width={768}
             height={768}
             sizes="(max-width: 850px) 90vw, 480px"
@@ -23,23 +24,24 @@ export const Map = () => {
           <HeaderThree as="h3">Address</HeaderThree>
           <AddressLink
             title="Get directions to Taco Nacion in Ontario, CA"
-            href={site.directionsUrl}
+            href={site.directionsUrl} data-track="directions"
             target="_blank"
             rel="noopener noreferrer"
           >
             {site.addressDisplay}
           </AddressLink>
           <HeaderThree as="h3">Hours</HeaderThree>
+          <OpenStatus />
           <HoursTable />
           <Button
             title="Directions to Taco Nacion"
-            href={site.directionsUrl}
+            href={site.directionsUrl} data-track="directions"
             target="_blank"
             rel="noopener noreferrer"
           >
             Get Directions
           </Button>
-          <Button title="Call Taco Nacion" href={`tel:${site.phone}`}>
+          <Button title="Call Taco Nacion" href={`tel:${site.phone}`} data-track="call">
             Call {site.phoneDisplay}
           </Button>
         </Column>

@@ -19,10 +19,10 @@ const OrderContent = () => {
         <HeaderTwo>Takeout or Delivery?</HeaderTwo>
         <Lead>Order ahead for pickup at our Ontario location, or get Taco Nacion delivered through Grubhub.</Lead>
         <ButtonRow>
-          <Button title="Order takeout from Taco Nacion online" href={site.orderTakeoutUrl} target="_blank" rel="noopener noreferrer">
+          <Button title="Order takeout from Taco Nacion online" href={site.orderTakeoutUrl} data-track="order-takeout" target="_blank" rel="noopener noreferrer">
             Takeout
           </Button>
-          <Button title="Order delivery from Taco Nacion on Grubhub" href={site.orderDeliveryUrl} target="_blank" rel="noopener noreferrer">
+          <Button title="Order delivery from Taco Nacion on Grubhub" href={site.orderDeliveryUrl} data-track="order-delivery" target="_blank" rel="noopener noreferrer">
             Delivery
           </Button>
         </ButtonRow>

@@ -23,7 +23,7 @@ export const CateringPage = () => {
                 events. Give us a call to find out more or to place an order.
             </Lead>
             <ButtonRow>
-                <Button title="Call Taco Nacion about catering" href={`tel:${site.phone}`}>
+                <Button title="Call Taco Nacion about catering" href={`tel:${site.phone}`} data-track="call">
                     Call {site.phoneDisplay}
                 </Button>
             </ButtonRow>

@@ -20,6 +20,12 @@ export const NavBarContainer = styled.nav`
         height: 64px;
     }
 `;
+export const Brand = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+`;
 export const LogoLink = styled(Link)`
     display: flex;
     flex-shrink: 0;
@@ -52,18 +58,15 @@ export const NavLink = styled(Link)`
         border-bottom-color: ${colors.brand};
     }
 `;
-export const OrderCta = styled(Link)`
+export const OrderCta = styled.a`
     ${buttonStyles}
     min-height: 40px;
     padding: 8px 20px;
     font-size: 1rem;
     box-shadow: none;
+    /* On tablet/phone the bottom action bar carries the order button. */
     @media (max-width: ${breakpoints.lg}) {
-        margin-left: auto;
-    }
-    @media (max-width: ${breakpoints.sm}) {
-        padding: 6px 14px;
-        font-size: 0.9rem;
+        display: none;
     }
 `;
 export const MenuToggle = styled.button`
@@ -74,6 +77,7 @@ export const MenuToggle = styled.button`
     cursor: pointer;
     @media (max-width: ${breakpoints.lg}) {
         display: flex;
+        margin-left: auto;
     }
 `;
 export const MobileList = styled.ul<{ $open: boolean }>`

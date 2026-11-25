@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import links from '../../data/nav_links.json';
 import HamburgerIcon from './hamburgerIcon';
-import { NavBarContainer, LogoLink, NavBarItems, NavLink, MenuToggle, MobileList, MobileLink, OrderCta } from './styled';
+import OpenStatus from '../openStatus/OpenStatus';
+import { site } from '../../config/site';
+import { NavBarContainer, Brand, LogoLink, NavBarItems, NavLink, MenuToggle, MobileList, MobileLink, OrderCta } from './styled';
 
 export const NavBar = () => {
     const [open, setOpen] = useState(false);
@@ -19,9 +21,12 @@ export const NavBar = () => {
 
     return (
         <NavBarContainer aria-label="Main navigation">
-            <LogoLink href="/" aria-label="Taco Nacion home">
-                <Image width={50} height={49} alt="Taco Nacion logo" src="/taco-nacion-logo.webp" priority />
-            </LogoLink>
+            <Brand>
+                <LogoLink href="/" aria-label="Taco Nacion home">
+                    <Image width={50} height={49} alt="Taco Nacion logo" src="/taco-nacion-logo.webp" priority />
+                </LogoLink>
+                <OpenStatus />
+            </Brand>
 
             <NavBarItems>
                 {links.map((link) => (
@@ -33,7 +38,9 @@ export const NavBar = () => {
                 ))}
             </NavBarItems>
 
-            <OrderCta href="/order">Order Now</OrderCta>
+            <OrderCta href={site.orderTakeoutUrl} data-track="order-takeout" target="_blank" rel="noopener noreferrer">
+                Order Now
+            </OrderCta>
 
             <MenuToggle
                 type="button"

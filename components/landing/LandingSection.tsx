@@ -37,7 +37,7 @@ export const LandingSection = () => {
         <SplitRow>
           <PhotoFrame>
             <NextImage
-              src="/taco_nacion_physical.jpg"
+              src="/taco-nacion-ontario-storefront.jpg"
               alt="Taco Nacion restaurant exterior with patio dining area in Ontario, California"
               width={768}
               height={768}
@@ -52,7 +52,7 @@ export const LandingSection = () => {
             </p>
             <p>
               Find us in the Milliken Business Center at{" "}
-              <a href={site.directionsUrl} target="_blank" rel="noopener noreferrer">
+              <a href={site.directionsUrl} data-track="directions" target="_blank" rel="noopener noreferrer">
                 {site.addressDisplay}
               </a>
               . Browse the full <Link href="/menu">menu</Link> or{" "}
@@ -62,7 +62,7 @@ export const LandingSection = () => {
         </SplitRow>
         <Button
           title="Directions to Taco Nacion"
-          href={site.directionsUrl}
+          href={site.directionsUrl} data-track="directions"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -70,7 +70,7 @@ export const LandingSection = () => {
         </Button>
       </Container>
 
-      <PhotoBanner as="section" aria-labelledby="beer-heading" $image="/taco_beer.webp">
+      <PhotoBanner as="section" aria-labelledby="beer-heading" $image="/taco-beer.webp">
         <Overlay>
           <SectionHeader id="beer-heading" $flush>
             Now Serving Tap &amp; Draft Beer
@@ -99,7 +99,7 @@ export const LandingSection = () => {
               info or to place an order.
             </Lead>
             <ButtonRow>
-              <Button title="Call Taco Nacion" href={`tel:${site.phone}`}>
+              <Button title="Call Taco Nacion" href={`tel:${site.phone}`} data-track="call">
                 Call {site.phoneDisplay}
               </Button>
               <Button as={Link} href="/catering" title="Taco Nacion catering">

@@ -30,7 +30,7 @@ export const Footer = () => {
           </Address>
           <Button
             title="Get directions to Taco Nacion in Ontario, CA"
-            href={site.directionsUrl}
+            href={site.directionsUrl} data-track="directions"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,8 +43,8 @@ export const Footer = () => {
         </FooterItem>
         <FooterItem>
           <FooterHeader>Contact</FooterHeader>
-          <TextLink href={`tel:${site.phone}`}>{site.phoneDisplay}</TextLink>
-          <Button title="Call Taco Nacion" href={`tel:${site.phone}`}>
+          <TextLink href={`tel:${site.phone}`} data-track="call">{site.phoneDisplay}</TextLink>
+          <Button title="Call Taco Nacion" href={`tel:${site.phone}`} data-track="call">
             Call Now
           </Button>
           <IconContainer>

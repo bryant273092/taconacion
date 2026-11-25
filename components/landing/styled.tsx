@@ -24,7 +24,7 @@ export const PhotoBanner = styled(FlexColumn)<{ $image?: string }>`
     margin: 0 auto;
     overflow: hidden;
     border-radius: 24px;
-    background-image: url(${(p) => p.$image || '/taco_catering.webp'});
+    background-image: url(${(p) => p.$image || '/taco-catering.webp'});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -27,7 +27,7 @@ export const restaurantSchema = {
   telephone: site.phone,
   priceRange: site.priceRange,
   servesCuisine: site.cuisine,
-  image: [absoluteUrl('/og-image.jpg'), absoluteUrl('/taco_nacion_physical.jpg')],
+  image: [absoluteUrl('/og-image.jpg'), absoluteUrl('/taco-nacion-ontario-storefront.jpg')],
   logo: absoluteUrl('/taco-nacion-logo.webp'),
   hasMenu: absoluteUrl('/menu'),
   acceptsReservations: false,
