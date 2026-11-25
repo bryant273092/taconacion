@@ -31,9 +31,8 @@ export const site = {
   },
   // Display rows + schema.org spec derived from the same data
   hours: [
-    { label: 'Mon–Thu', days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '07:30', closes: '18:00', display: '7:30 AM – 6:00 PM' },
-    { label: 'Fri', days: ['Friday'], opens: '07:30', closes: '19:00', display: '7:30 AM – 7:00 PM' },
-    { label: 'Sat', days: ['Saturday'], opens: '07:30', closes: '14:30', display: '7:30 AM – 2:30 PM' },
+    { label: 'Mon–Fri', days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '16:30', display: '7:00 AM – 4:30 PM' },
+    { label: 'Sat', days: ['Saturday'], opens: '07:30', closes: '14:00', display: '7:30 AM – 2:00 PM' },
     { label: 'Sun', days: [], opens: '', closes: '', display: 'Closed' },
   ],
 } as const;
