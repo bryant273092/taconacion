@@ -1,3 +1,4 @@
-User-Agent: *
+User-agent: *
 Allow: /
-Sitemap: https://taco-nacion.com/sitemap.xml
+
+Sitemap: https://www.taco-nacion.com/sitemap.xml
