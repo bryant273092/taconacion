@@ -5,6 +5,12 @@ body {
   margin: 0;
 }
 
+/* Always reserve the scrollbar's space so short pages (e.g. /order) don't
+   shift horizontally when the scrollbar appears/disappears between pages. */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: #111;
   background-image: url(/background.webp);
